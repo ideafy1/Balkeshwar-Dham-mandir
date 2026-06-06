@@ -1,1473 +1,1195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Balkeshwar Dham mandir Khokhara</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" >
-	 <link href="fonts/css/fontawesome.min.css" rel="stylesheet" >
-	<link href="fonts/css/brands.min.css" rel="stylesheet" />
-    <link href="fonts/css/solid.min.css" rel="stylesheet" />
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
+	<title>बालकेश्वर धाम मंदिर खोंखरा | Balkeshwar Dham Mandir Khokhara</title>
+	<meta name="description" content="बालकेश्वर धाम मंदिर खोंखरा - श्री कृष्ण के बाल स्वरूप को समर्पित पवित्र धाम। 306306, सोजत, पाली, राजस्थान। Balkeshwar Dham Mandir Khokhara - Sacred temple dedicated to Bal Krishna Swarup.">
+	<link rel="icon" type="image/png" href="img/bal-krishna-logo.png">
+	<link rel="apple-touch-icon" href="img/bal-krishna-logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+	<link href="fonts/css/fontawesome.min.css" rel="stylesheet">
+	<link href="fonts/css/brands.min.css" rel="stylesheet">
+	<link href="fonts/css/solid.min.css" rel="stylesheet">
+	<style>
+		/* ========== RESET & BASE ========== */
+		*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+		html { scroll-behavior: smooth; overflow-x: hidden; }
+		body {
+			font-family: 'Poppins', sans-serif;
+			line-height: 1.7;
+			color: #2d1810;
+			background: #fffaf5;
+			overflow-x: hidden;
+		}
+		img { max-width: 100%; height: auto; display: block; }
+		a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+		ul { list-style: none; padding: 0; margin: 0; }
+		.hindi-font { font-family: 'Tiro Devanagari Hindi', 'Poppins', serif; }
 
+		/* ========== CSS VARIABLES ========== */
+		:root {
+			--saffron: #FF6B00;
+			--saffron-light: #FF8C38;
+			--saffron-dark: #E05500;
+			--gold: #D4A017;
+			--gold-light: #F5D77A;
+			--maroon: #6B0F1A;
+			--maroon-dark: #3D0A10;
+			--cream: #FFF8F0;
+			--warm-white: #FFFAF5;
+			--text-dark: #2D1810;
+			--text-muted: #7A6455;
+			--border-light: rgba(212, 160, 23, 0.2);
+			--shadow-soft: 0 4px 20px rgba(107, 15, 26, 0.08);
+			--shadow-hover: 0 8px 40px rgba(107, 15, 26, 0.15);
+			--gradient-saffron: linear-gradient(135deg, #FF6B00 0%, #FF8C38 100%);
+			--gradient-maroon: linear-gradient(135deg, #6B0F1A 0%, #8B1A2B 100%);
+			--gradient-gold: linear-gradient(135deg, #D4A017 0%, #F5D77A 100%);
+			--gradient-hero: linear-gradient(135deg, rgba(107,15,26,0.92) 0%, rgba(61,10,16,0.88) 50%, rgba(255,107,0,0.75) 100%);
+		}
+
+		/* ========== CONTAINER ========== */
+		.container {
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		/* ========== NAVIGATION ========== */
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			background: rgba(255, 248, 240, 0.95);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			border-bottom: 2px solid var(--border-light);
+			transition: all 0.3s ease;
+			padding: 0;
+		}
+		.navbar.scrolled {
+			background: rgba(255, 248, 240, 0.98);
+			box-shadow: 0 2px 30px rgba(107, 15, 26, 0.12);
+		}
+		.nav-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 8px 0;
+		}
+		.nav-brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			text-decoration: none;
+		}
+		.nav-brand img {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			border: 2px solid var(--gold);
+			object-fit: cover;
+		}
+		.nav-brand-text h1 {
+			font-size: 16px;
+			font-weight: 800;
+			color: var(--maroon);
+			line-height: 1.2;
+			margin: 0;
+		}
+		.nav-brand-text span {
+			font-size: 11px;
+			color: var(--saffron);
+			font-weight: 500;
+		}
+		.nav-links {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.nav-links a {
+			padding: 10px 18px;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--maroon);
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			border-radius: 8px;
+			position: relative;
+		}
+		.nav-links a:hover, .nav-links a.active {
+			color: var(--saffron);
+			background: rgba(255, 107, 0, 0.08);
+		}
+		.nav-links a.active::after {
+			content: '';
+			position: absolute;
+			bottom: 4px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 20px;
+			height: 3px;
+			background: var(--saffron);
+			border-radius: 2px;
+		}
+		.nav-donate-btn {
+			background: var(--gradient-saffron) !important;
+			color: #fff !important;
+			padding: 10px 24px !important;
+			border-radius: 50px !important;
+			font-weight: 700 !important;
+			box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+		}
+		.nav-donate-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 25px rgba(255, 107, 0, 0.4) !important;
+			background: var(--gradient-saffron) !important;
+			color: #fff !important;
+		}
+
+		/* Mobile Nav */
+		.nav-toggle {
+			display: none;
+			flex-direction: column;
+			gap: 5px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 8px;
+		}
+		.nav-toggle span {
+			width: 26px;
+			height: 3px;
+			background: var(--maroon);
+			border-radius: 3px;
+			transition: all 0.3s ease;
+		}
+		.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+		.nav-toggle.active span:nth-child(2) { opacity: 0; }
+		.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+		/* ========== HERO SECTION ========== */
+		.hero {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			background: var(--gradient-hero);
+			overflow: hidden;
+			padding-top: 80px;
+		}
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: url('img/1.jpg') center/cover no-repeat;
+			z-index: -1;
+		}
+		.hero::after {
+			content: 'ॐ';
+			position: absolute;
+			right: -80px;
+			bottom: -60px;
+			font-size: 400px;
+			color: rgba(255,255,255,0.04);
+			font-weight: 900;
+			pointer-events: none;
+		}
+		.hero-content {
+			text-align: center;
+			padding: 40px 20px;
+			max-width: 900px;
+		}
+		.hero-om {
+			font-size: 48px;
+			color: var(--gold-light);
+			margin-bottom: 16px;
+			animation: float 3s ease-in-out infinite;
+		}
+		@keyframes float {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-10px); }
+		}
+		.hero-logo {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			border: 4px solid var(--gold-light);
+			margin: 0 auto 24px;
+			box-shadow: 0 0 40px rgba(212, 160, 23, 0.4);
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+		@keyframes glow {
+			0% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+			100% { box-shadow: 0 0 50px rgba(212, 160, 23, 0.6); }
+		}
+		.hero-subtitle {
+			font-size: 14px;
+			letter-spacing: 6px;
+			text-transform: uppercase;
+			color: var(--gold-light);
+			margin-bottom: 16px;
+			font-weight: 500;
+		}
+		.hero h2 {
+			font-size: clamp(32px, 6vw, 60px);
+			font-weight: 900;
+			color: #fff;
+			line-height: 1.15;
+			margin-bottom: 8px;
+			text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+		}
+		.hero-hindi {
+			font-size: clamp(20px, 4vw, 36px);
+			color: var(--gold-light);
+			font-family: 'Tiro Devanagari Hindi', serif;
+			margin-bottom: 24px;
+			font-weight: 400;
+		}
+		.hero p {
+			font-size: clamp(14px, 2vw, 17px);
+			color: rgba(255,255,255,0.85);
+			max-width: 650px;
+			margin: 0 auto 32px;
+			line-height: 1.8;
+		}
+		.hero-address {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: rgba(255,255,255,0.1);
+			backdrop-filter: blur(10px);
+			padding: 12px 28px;
+			border-radius: 50px;
+			border: 1px solid rgba(255,255,255,0.15);
+			color: rgba(255,255,255,0.9);
+			font-size: 14px;
+			margin-bottom: 32px;
+		}
+		.hero-btns {
+			display: flex;
+			gap: 16px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.btn-primary-custom {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 14px 36px;
+			background: var(--gradient-saffron);
+			color: #fff;
+			font-weight: 700;
+			font-size: 15px;
+			border-radius: 50px;
+			border: none;
+			cursor: pointer;
+			box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
+			transition: all 0.3s ease;
+		}
+		.btn-primary-custom:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 8px 30px rgba(255, 107, 0, 0.5);
+			color: #fff;
+		}
+		.btn-outline-custom {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 14px 36px;
+			background: transparent;
+			color: #fff;
+			font-weight: 700;
+			font-size: 15px;
+			border-radius: 50px;
+			border: 2px solid rgba(255,255,255,0.4);
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.btn-outline-custom:hover {
+			background: rgba(255,255,255,0.15);
+			border-color: rgba(255,255,255,0.6);
+			color: #fff;
+		}
+
+		/* ========== SECTION STYLES ========== */
+		.section {
+			padding: 80px 0;
+		}
+		.section-bg {
+			background: #fff;
+		}
+		.section-header {
+			text-align: center;
+			margin-bottom: 56px;
+		}
+		.section-header .tag {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--saffron);
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin-bottom: 12px;
+		}
+		.section-header .tag i {
+			font-size: 10px;
+		}
+		.section-header h2 {
+			font-size: clamp(26px, 4vw, 42px);
+			font-weight: 800;
+			color: var(--maroon);
+			line-height: 1.3;
+			margin-bottom: 8px;
+		}
+		.section-header .hindi-sub {
+			font-family: 'Tiro Devanagari Hindi', serif;
+			font-size: clamp(18px, 3vw, 24px);
+			color: var(--saffron);
+			margin-bottom: 16px;
+		}
+		.section-header p {
+			color: var(--text-muted);
+			max-width: 600px;
+			margin: 0 auto;
+			font-size: 15px;
+		}
+
+		/* ========== ABOUT SECTION ========== */
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+		}
+		.about-img {
+			position: relative;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: var(--shadow-hover);
+		}
+		.about-img img {
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+		.about-img:hover img {
+			transform: scale(1.05);
+		}
+		.about-img .badge-float {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background: var(--gradient-saffron);
+			color: #fff;
+			padding: 16px 24px;
+			border-radius: 16px;
+			text-align: center;
+			box-shadow: 0 8px 30px rgba(255, 107, 0, 0.4);
+		}
+		.badge-float .num {
+			font-size: 32px;
+			font-weight: 900;
+			line-height: 1;
+		}
+		.badge-float .label {
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		.about-text h3 {
+			font-size: 28px;
+			font-weight: 800;
+			color: var(--maroon);
+			margin-bottom: 16px;
+		}
+		.about-text p {
+			color: var(--text-muted);
+			margin-bottom: 16px;
+			font-size: 15px;
+		}
+		.about-features {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px;
+			margin-top: 24px;
+		}
+		.about-feature {
+			display: flex;
+			align-items: flex-start;
+			gap: 12px;
+			padding: 16px;
+			background: var(--cream);
+			border-radius: 12px;
+			border: 1px solid var(--border-light);
+			transition: all 0.3s ease;
+		}
+		.about-feature:hover {
+			box-shadow: var(--shadow-soft);
+			transform: translateY(-2px);
+		}
+		.about-feature i {
+			font-size: 24px;
+			color: var(--saffron);
+			flex-shrink: 0;
+			margin-top: 2px;
+		}
+		.about-feature h5 {
+			font-size: 14px;
+			font-weight: 700;
+			color: var(--maroon);
+			margin: 0 0 4px;
+		}
+		.about-feature span {
+			font-size: 12px;
+			color: var(--text-muted);
+		}
+
+		/* ========== AARTI TIMINGS ========== */
+		.aarti-cards {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+		}
+		.aarti-card {
+			background: #fff;
+			border-radius: 20px;
+			padding: 36px 28px;
+			text-align: center;
+			border: 1px solid var(--border-light);
+			box-shadow: var(--shadow-soft);
+			transition: all 0.4s ease;
+			position: relative;
+			overflow: hidden;
+		}
+		.aarti-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: var(--gradient-saffron);
+		}
+		.aarti-card:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-hover);
+		}
+		.aarti-card .icon {
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			font-size: 28px;
+			transition: all 0.3s ease;
+		}
+		.aarti-card:nth-child(1) .icon { background: rgba(255, 107, 0, 0.1); color: var(--saffron); }
+		.aarti-card:nth-child(2) .icon { background: rgba(107, 15, 26, 0.1); color: var(--maroon); }
+		.aarti-card:nth-child(3) .icon { background: rgba(212, 160, 23, 0.15); color: var(--gold); }
+		.aarti-card:hover .icon { transform: scale(1.1) rotate(5deg); }
+		.aarti-card h4 {
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--maroon);
+			margin-bottom: 4px;
+		}
+		.aarti-card .hindi-name {
+			font-family: 'Tiro Devanagari Hindi', serif;
+			color: var(--saffron);
+			font-size: 15px;
+			margin-bottom: 12px;
+		}
+		.aarti-card .time {
+			font-size: 22px;
+			font-weight: 800;
+			color: var(--maroon);
+			margin-bottom: 8px;
+		}
+		.aarti-card p {
+			font-size: 13px;
+			color: var(--text-muted);
+		}
+
+		/* ========== GALLERY ========== */
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 16px;
+		}
+		.gallery-item {
+			position: relative;
+			border-radius: 16px;
+			overflow: hidden;
+			aspect-ratio: 1;
+			cursor: pointer;
+		}
+		.gallery-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+		.gallery-item:hover img {
+			transform: scale(1.1);
+		}
+		.gallery-item::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to top, rgba(107, 15, 26, 0.6) 0%, transparent 60%);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+		.gallery-item:hover::after {
+			opacity: 1;
+		}
+		.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+
+		/* ========== DONATION SECTION ========== */
+		.donate-section {
+			background: var(--gradient-maroon);
+			position: relative;
+			overflow: hidden;
+		}
+		.donate-section::after {
+			content: '🙏';
+			position: absolute;
+			right: 40px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 200px;
+			opacity: 0.05;
+			pointer-events: none;
+		}
+		.donate-content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+		}
+		.donate-text h2 {
+			font-size: clamp(26px, 4vw, 38px);
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 16px;
+		}
+		.donate-text p {
+			color: rgba(255,255,255,0.75);
+			font-size: 15px;
+			margin-bottom: 28px;
+			line-height: 1.8;
+		}
+		.donate-info {
+			background: rgba(255,255,255,0.08);
+			border-radius: 20px;
+			padding: 36px;
+			border: 1px solid rgba(255,255,255,0.1);
+			backdrop-filter: blur(10px);
+		}
+		.donate-info h3 {
+			color: var(--gold-light);
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		.donate-info p {
+			color: rgba(255,255,255,0.7);
+			font-size: 14px;
+			margin-bottom: 24px;
+		}
+
+		/* ========== LOCATION SECTION ========== */
+		.location-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+			align-items: start;
+		}
+		.location-map {
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: var(--shadow-hover);
+			height: 400px;
+		}
+		.location-map iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		.location-details {
+			padding: 20px 0;
+		}
+		.location-item {
+			display: flex;
+			gap: 16px;
+			align-items: flex-start;
+			padding: 20px;
+			background: #fff;
+			border-radius: 16px;
+			margin-bottom: 16px;
+			border: 1px solid var(--border-light);
+			transition: all 0.3s ease;
+		}
+		.location-item:hover {
+			box-shadow: var(--shadow-soft);
+			transform: translateX(4px);
+		}
+		.location-item .icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(255, 107, 0, 0.1);
+			color: var(--saffron);
+			font-size: 20px;
+			flex-shrink: 0;
+		}
+		.location-item h5 {
+			font-size: 14px;
+			font-weight: 700;
+			color: var(--maroon);
+			margin: 0 0 4px;
+		}
+		.location-item p {
+			font-size: 13px;
+			color: var(--text-muted);
+			margin: 0;
+		}
+
+		/* ========== FOOTER ========== */
+		.footer {
+			background: var(--maroon-dark);
+			padding: 60px 0 0;
+		}
+		.footer-grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr;
+			gap: 40px;
+			padding-bottom: 40px;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+		}
+		.footer-brand img {
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			border: 2px solid var(--gold);
+			margin-bottom: 16px;
+		}
+		.footer-brand h3 {
+			font-size: 20px;
+			color: #fff;
+			margin-bottom: 4px;
+		}
+		.footer-brand .sub {
+			font-size: 13px;
+			color: var(--saffron-light);
+			margin-bottom: 16px;
+		}
+		.footer-brand p {
+			color: rgba(255,255,255,0.6);
+			font-size: 13px;
+			line-height: 1.8;
+		}
+		.footer h4 {
+			font-size: 16px;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		.footer-links a {
+			display: block;
+			color: rgba(255,255,255,0.6);
+			font-size: 14px;
+			padding: 6px 0;
+			transition: all 0.3s ease;
+		}
+		.footer-links a:hover {
+			color: var(--saffron-light);
+			padding-left: 8px;
+		}
+		.footer-links a i {
+			margin-right: 8px;
+			font-size: 10px;
+			color: var(--saffron);
+		}
+		.footer-bottom {
+			padding: 20px 0;
+			text-align: center;
+		}
+		.footer-bottom p {
+			color: rgba(255,255,255,0.4);
+			font-size: 13px;
+		}
+		.footer-bottom span {
+			color: var(--saffron-light);
+		}
+
+		/* ========== SCROLL TO TOP ========== */
+		.scroll-top {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 48px;
+			height: 48px;
+			background: var(--gradient-saffron);
+			color: #fff;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			box-shadow: 0 4px 20px rgba(255, 107, 0, 0.4);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			z-index: 999;
+			border: none;
+		}
+		.scroll-top.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		.scroll-top:hover {
+			transform: translateY(-4px);
+		}
+
+		/* ========== ANIMATIONS ========== */
+		.fade-up {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: all 0.6s ease;
+		}
+		.fade-up.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* ========== RESPONSIVE ========== */
+		@media (max-width: 992px) {
+			.nav-links { display: none; }
+			.nav-toggle { display: flex; }
+			.nav-links.open {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				background: rgba(255, 248, 240, 0.98);
+				backdrop-filter: blur(20px);
+				padding: 16px 20px;
+				border-bottom: 2px solid var(--border-light);
+				box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+				gap: 4px;
+			}
+			.nav-links.open a {
+				padding: 14px 20px;
+				font-size: 15px;
+				border-radius: 12px;
+			}
+			.nav-links.open a:hover {
+				background: rgba(255, 107, 0, 0.08);
+			}
+			.about-grid { grid-template-columns: 1fr; gap: 32px; }
+			.aarti-cards { grid-template-columns: 1fr; }
+			.gallery-grid { grid-template-columns: repeat(2, 1fr); }
+			.gallery-item:nth-child(1) { grid-column: span 2; }
+			.donate-content { grid-template-columns: 1fr; gap: 32px; }
+			.location-grid { grid-template-columns: 1fr; }
+			.footer-grid { grid-template-columns: 1fr; gap: 32px; }
+		}
+
+		@media (max-width: 768px) {
+			.section { padding: 56px 0; }
+			.hero { min-height: 90vh; }
+			.hero-logo { width: 90px; height: 90px; }
+			.hero-om { font-size: 36px; }
+			.hero-subtitle { letter-spacing: 3px; font-size: 12px; }
+			.hero-btns { flex-direction: column; align-items: center; }
+			.btn-primary-custom, .btn-outline-custom { width: 100%; max-width: 280px; justify-content: center; }
+			.aarti-cards { grid-template-columns: 1fr; }
+			.gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+			.gallery-item { border-radius: 12px; }
+			.gallery-item:nth-child(1) { grid-column: span 2; }
+			.about-features { grid-template-columns: 1fr; }
+			.about-img img { height: 280px; }
+			.location-map { height: 280px; }
+			.donate-info { padding: 24px; }
+		}
+
+		@media (max-width: 480px) {
+			.container { padding: 0 16px; }
+			.hero { min-height: 85vh; padding-top: 70px; }
+			.hero-content { padding: 24px 12px; }
+			.hero-logo { width: 72px; height: 72px; border-width: 3px; }
+			.hero h2 { font-size: 28px; }
+			.hero-hindi { font-size: 18px; }
+			.hero p { font-size: 13px; }
+			.hero-address { font-size: 12px; padding: 10px 20px; }
+			.section-header h2 { font-size: 24px; }
+			.nav-brand img { width: 40px; height: 40px; }
+			.nav-brand-text h1 { font-size: 14px; }
+			.nav-brand-text span { font-size: 10px; }
+			.aarti-card { padding: 28px 20px; }
+			.about-img img { height: 220px; }
+			.gallery-grid { gap: 6px; }
+			.gallery-item { border-radius: 8px; }
+			.btn-primary-custom, .btn-outline-custom { padding: 12px 28px; font-size: 14px; }
+			.footer-grid { gap: 24px; }
+			.scroll-top { width: 40px; height: 40px; font-size: 16px; bottom: 20px; right: 20px; }
+		}
+	</style>
 </head>
 <body>
-<div class="main position-relative">
- <div class="main_1 position-absolute top-0 w-100">
-   
-   <section id="header">
-<nav class="navbar navbar-expand-md navbar-light  p-0 bg-white" id="navbar_sticky">
-  <div class="container-xl">
-    <a class="p-0 navbar-brand fw-bold me-0  text-black" href="index.html"><i class="fa-solid fa-om me-1 col_oran"></i> Balkeshwar Dham <br>
-<span class="fw-normal font_14 text-muted">mandir Khokhara</span>
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	   <ul class="navbar-nav mb-0 ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">होम (मुख्य पृष्ठ)</a>
-        </li>
-		 
-		<li class="nav-item">
-          <a class="nav-link" href="हमारे बारे में.html">हमारे बारे में </a>
-        </li>
-		
-		
-		
-		<li class="nav-item"><a class="nav-link" href="donation.html">Donation (दान)</a></li>
-		
-		
-		
-		
 
-		
-		
-		
-		<li class="nav-item">
-          <a class="nav-link" href="contact.html">संपर्क करें</a>
-        </li>
-
-      </ul>
-      <ul class="navbar-nav mb-0 ms-auto">
-		<li class="nav-item dropdown">
-          <a class="dropdown-toggle nav_hide nav-link fs-6" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-search"></i>
-          </a>
-		<ul class="dropdown-menu drop_1 drop_search p-3" aria-labelledby="navbarDropdown" style="">
-		<form class="navbar-form" role="search">
-		<div class="input-group">
-			<input type="text" class="form-control font_14" placeholder="Search Keyword">
-			<span class="input-group-btn">
-				<button class="btn btn-primary bg_blue border-0 rounded-0 p-2 px-3" type="button">
-					<i class="fa fa-search"></i> </button>
-			</span>
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar" id="navbar">
+	<div class="container">
+		<div class="nav-inner">
+			<a href="index.html" class="nav-brand">
+				<img src="img/bal-krishna-logo.png" alt="बालकेश्वर धाम लोगो" id="nav-logo">
+				<div class="nav-brand-text">
+					<h1>बालकेश्वर धाम</h1>
+					<span>मंदिर खोंखरा, सोजत</span>
+				</div>
+			</a>
+			<button class="nav-toggle" id="navToggle" aria-label="Menu">
+				<span></span><span></span><span></span>
+			</button>
+			<div class="nav-links" id="navLinks">
+				<a href="index.html" class="active">मुख्य पृष्ठ</a>
+				<a href="about.html">हमारे बारे में</a>
+				<a href="contact.html">संपर्क करें</a>
+				<a href="donation.html" class="nav-donate-btn">दान करें 🙏</a>
+			</div>
 		</div>
-		</form>
-		</ul>
-        </li>
-			<li class="nav-item">
-          <a class="nav-link fs-6" href="#"><i class="fa fa-heart"></i> </a>
-        </li>
-		
-      </ul>
-    </div>
-  </div>
+	</div>
 </nav>
-</section>
- </div>
- 
- <div class="main_2">
-     <section id="center" class="center_होम (मुख्य पृष्ठ)">
- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-  </div>
-  <div class="bg_back w-100 h-100 position-absolute center_ht"></div>
-  
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/1.jpg" class="d-block w-100" alt="...">
-	  <div class="center_hm1 position-absolute">
-		 <img src="img/43.png" alt="abc">
-	  </div>
-      <div class="carousel-caption carousel-caption1 d-md-block">
-	    <h1 class="text-white text-uppercase font_50">जय श्री कृष्णा - बाल स्वरूप</h1>
-		<p class="mt-3 text-light">यह धाम श्री कृष्ण के बाल स्वरूप को समर्पित है। आइए और बाल गोपाल की मनमोहक लीलाओं का आनंद लें।</p>
-		<ul class="mb-0 mt-4">
-		 <li class="d-inline-block"><a class="button_2" href="#">दर्शन करें <i class="fa fa-arrow-right ms-1"></i></a></li>
-		 <li class="d-inline-block ms-3"><a class="button_3" href="#">लाइव आरती <i class="fa fa-arrow-right ms-1"></i></a></li>
-		</ul>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/2.jpg" class="d-block w-100" alt="...">
-	  <div class="center_hm1 position-absolute">
-		 <img src="img/43.png" alt="abc">
-	  </div>
 
-      <div class="carousel-caption carousel-caption2 d-md-block">
-	      <h1 class="text-white text-uppercase font_50">बालकेश्वर धाम खोंखरा में आपका स्वागत है </h1>
-		<p class="mt-3 text-light">यह धाम श्री कृष्ण के बाल स्वरूप को समर्पित है। आइए और बाल गोपाल की मनमोहक लीलाओं का आनंद लें।</p>
-		<ul class="mb-0 mt-4">
-		 <li class="d-inline-block"><a class="button_2" href="#">दर्शन करें <i class="fa fa-arrow-right ms-1"></i></a></li>
-		 <li class="d-inline-block ms-3"><a class="button_3" href="#">लाइव आरती <i class="fa fa-arrow-right ms-1"></i></a></li>
-		</ul>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/3.jpg" class="d-block w-100" alt="...">
-	  <div class="center_hm1 position-absolute">
-		 <img src="img/43.png" alt="abc">
-	  </div>
-
-      <div class="carousel-caption carousel-caption3 d-md-block">
-	       <h1 class="text-white text-uppercase font_50">नटखट नंदलाल की कृपा</h1>
-		<p class="mt-3 text-light">यह धाम श्री कृष्ण के बाल स्वरूप को समर्पित है। आइए और बाल गोपाल की मनमोहक लीलाओं का आनंद लें।</p>
-		<ul class="mb-0 mt-4">
-		 <li class="d-inline-block"><a class="button_2" href="#">दर्शन करें <i class="fa fa-arrow-right ms-1"></i></a></li>
-		 <li class="d-inline-block ms-3"><a class="button_3" href="#">लाइव आरती <i class="fa fa-arrow-right ms-1"></i></a></li>
-		</ul>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</section>
- </div>
-</div>
-
-<section id="हमारे बारे में_h" class="p_4">
-    <div class="container-xl">
-	  <div class="row हमारे बारे में_h1">
-	    <div class="col-md-4">
-		  <div class="हमारे बारे में_h1l text-center p-5 border_1">
-		   <span class="d-inline-block rounded-circle border_1 col_oran font_50 hvr-grow"><i class="fa-solid fa-hands-praying"></i></span>
-		   <h4 class="mt-4 mb-4"><a class="col_blue" href="#">प्रातः आरती (मंगला आरती)</a></h4>
-		   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod</p>
-		  </div>
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+	<div class="hero-content">
+		<div class="hero-om">🙏</div>
+		<img src="img/bal-krishna-logo.png" alt="बाल कृष्ण" class="hero-logo">
+		<div class="hero-subtitle">॥ श्री कृष्ण शरणम् ममः ॥</div>
+		<h2>बालकेश्वर धाम</h2>
+		<div class="hero-hindi">श्री कृष्ण के बाल स्वरूप को समर्पित पवित्र धाम</div>
+		<p>भगवान श्री कृष्ण के मनमोहक बाल रूप (बाल गोपाल) की दिव्य लीलाओं का स्थान। यहाँ आकर माखन चोर नंदलाल के दर्शन कीजिए और उनकी कृपा पाइए।</p>
+		<div class="hero-address">
+			<i class="fa-solid fa-location-dot"></i>
+			खोंखरा, 306306 — सोजत, पाली, राजस्थान
 		</div>
-		<div class="col-md-4">
-		  <div class="हमारे बारे में_h1l text-center p-5 bg_oran">
-		   <span class="d-inline-block rounded-circle border_1 text-white font_50 hvr-grow"><i class="fa fa-microphone"></i></span>
-		   <h4 class="mt-4 mb-4"><a class="text-white" href="#">भजन कीर्तन</a></h4>
-		   <p class="mb-0 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod</p>
-		  </div>
+		<div class="hero-btns">
+			<a href="#darshan" class="btn-primary-custom">
+				<i class="fa-solid fa-hands-praying"></i> दर्शन करें
+			</a>
+			<a href="donation.html" class="btn-outline-custom">
+				<i class="fa-solid fa-hand-holding-heart"></i> दान करें
+			</a>
 		</div>
-		<div class="col-md-4">
-		  <div class="हमारे बारे में_h1l text-center p-5 bg_blue">
-		   <span class="d-inline-block rounded-circle border_1 col_oran hvr-grow font_50"><i class="fa-solid fa-om"></i></span>
-		   <h4 class="mt-4 mb-4"><a class="text-white" href="#">प्रसाद वितरण</a></h4>
-		   <p class="mb-0 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="row हमारे बारे में_h2 mt-5">
-	    <div class="col-md-5">
-		  <div class="हमारे बारे में_h2l text-center float-end">
-            <h1 class="d-inline-block bg_blue text-white rounded-circle text-center">25<span class="fs-6">+</span> <br> <span class="fs-6 fw-normal">Join Our temple</span></h1>
-		  </div>
-		</div>
-		<div class="col-md-7">
-		  <div class="हमारे बारे में_h2r">
-            <h5 class="col_oran fs-6">+  WE HAVE 28+ YEARS OF EXPERIENCE</h5>
-			<h1 class="mt-3 font_50">बालकेश्वर धाम - <br> श्री कृष्ण का बाल स्वरूप</h1>
-<p class="mt-3 p-3">बालकेश्वर धाम खोंखरा में आपका स्वागत है। यह धाम बाल कृष्ण की मनमोहक लीलाओं और उनके बाल स्वरूप का प्रतीक है।</p>
-<div class="हमारे बारे में_h2ri row mt-4">
- <div class="col-md-6 col-sm-6">
-   <div class="हमारे बारे में_h2ril">
-     <div class="हमारे बारे में_h2rili row">
-	   <div class="col-md-2">
-	     <div class="हमारे बारे में_h2rilil">
-		   <span class="d-inline-block col_oran fs-2"><i class="fa-solid fa-hands-praying"></i></span>
-		 </div>
-	   </div>
-	   <div class="col-md-10">
-	     <div class="हमारे बारे में_h2rilir">
-		   <h4>Helping Hand</h4>
-		   <p class="border-0">Vestibulum ac diam sit amet quam vehicula elementum sed.</p>
-		 </div>
-	   </div>
-	 </div>
-   </div>
- </div>
- <div class="col-md-6 col-sm-6">
-   <div class="हमारे बारे में_h2ril">
-     <div class="हमारे बारे में_h2rili row">
-	   <div class="col-md-2">
-	     <div class="हमारे बारे में_h2rilil">
-		   <span class="d-inline-block col_oran fs-2"><i class="fa-solid fa-handshake-angle"></i></span>
-		 </div>
-	   </div>
-	   <div class="col-md-10">
-	     <div class="हमारे बारे में_h2rilir">
-		   <h4>Open Hearts</h4>
-		   <p class="border-0">Vestibulum ac diam sit amet quam vehicula elementum sed.</p>
-		 </div>
-	   </div>
-	 </div>
-   </div>
- </div>
-</div>
-<h6 class="mb-0 mt-3"><a class="button_4" href="#">Learn More <i class="fa fa-arrow-right ms-1"></i></a></h6>
-		  </div>
-		</div>
-	  </div>
-	  <div class="row हमारे बारे में_h3 mt-5 position-relative">
-	    <div class="हमारे बारे में_h3m position-absolute">
-		  <img src="img/4.png"  alt="img25">
-		</div>
-		<div class="हमारे बारे में_h3m1">
-		  <div class="हमारे बारे में_h3i1 row">
-		    <div class="col-md-7">
-			  <div class="हमारे बारे में_h3i1l bg_blue p-5 text-end">
-			     <h5 class="col_oran fs-6">Need Help, Call Our HOTLINE!</h5>
-				 <h2 class="mb-0 text-white mt-3">+1 212-683-9756</h2>
-			  </div>
-			</div>
-			<div class="col-md-5">
-			  <div class="हमारे बारे में_h3i1r p-5 bg_oran">
-			    <h5 class="text-white fs-6 mb-3">Join Our Temple Newsletter</h5>
-				<div class="input-group">
-			<input type="text" class="form-control font_14 border-0" placeholder="Enter Email Address">
-			<span class="input-group-btn">
-				<button class="btn btn-primary  border-0 rounded-0 p-3 px-4" type="button">
-					<i class="fa fa-envelope"></i> </button>
-			</span>
-		</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="हमारे बारे में_h3m2 position-absolute">
-		  <div class="हमारे बारे में_h3m2i row">
-		    <div class="col-md-12">
-			  <span class="d-inline-block shadow_box text-center fw-bold bg-white">or</span>
-			</div>
-		  </div>
-		</div>
-	  </div>
 	</div>
-   </section>
-   
-<section id="donate" class="p_4 pt-0">
-<div class="container-xl">
-  <div class="donate_1 row text-center mb-5">
-    <div class="col-md-12">
-	  <h5 class="col_oran fs-6 mt-3">+ DONATE TO HELP +</h5>
-	  <h1 class="mb-0 font_50 mt-3">मंदिर निर्माण और सेवा कार्यों में <br> अपना सहयोग दें (दान)</h1>
-	</div>
-  </div>
-  <div class="donate_2 row">
-    <div class="col-md-4">
-     <div class="donate_2l">
-	   <div class="donate_2li">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/5.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	   <div class="donate_2li1 p-4 border_1 border-top-0">
-	     <h4><a class="col_blue a_tag" href="#">Become those who do</a></h4>
-		 <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-		 <h6 class="mb-3">Raised: <span class="fw-bold">$2410</span> <span class="float-end">Goal: <span class="fw-bold">$4000</span></span></h6>
-		 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
-</div>
-         <h6 class="mb-0 mt-4"><a class="button_1" href="#">Donate Now</a></h6>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-4">
-     <div class="donate_2l">
-	   <div class="donate_2li">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/6.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	   <div class="donate_2li1 p-4 border_1 border-top-0">
-	     <h4><a class="col_blue a_tag" href="#">Donate Ngos</a></h4>
-		 <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-		 <h6 class="mb-3">Raised: <span class="fw-bold">$1400</span> <span class="float-end">Goal: <span class="fw-bold">$2000</span></span></h6>
-		 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
-</div>
-         <h6 class="mb-0 mt-4"><a class="button_1" href="#">Donate Now</a></h6>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-4">
-     <div class="donate_2l">
-	   <div class="donate_2li">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/7.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	   <div class="donate_2li1 p-4 border_1 border-top-0">
-	     <h4><a class="col_blue a_tag" href="#">Feed Poors</a></h4>
-		 <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
-		 <h6 class="mb-3">Raised: <span class="fw-bold">$2090</span> <span class="float-end">Goal: <span class="fw-bold">$3000</span></span></h6>
-		 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
-</div>
-         <h6 class="mb-0 mt-4"><a class="button_1" href="#">Donate Now</a></h6>
-	 </div>
-	 </div>
-	</div>
-  </div>
-</div>
 </section>
 
-<section id="watch" class="p_4 pt-0">
-<div class="container-xl">
-  <div class="donate_1 row text-center mb-5">
-    <div class="col-md-12">
-	  <h5 class="col_oran fs-6 mt-3">+  WATCH VIDEO +</h5>
-	  <h1 class="mb-0 font_50 mt-3">हमारी लाइव आरती और दर्शन</h1>
-	</div>
-  </div>
-  <div class="watch_1 row">
-    <div class="col-md-6 pe-0">
-     <div class="watch_1l position-relative">
-	   <div class="watch_1l1">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/8.jpg" class="w-100" alt="img25"></a>
-			</figure>
+<!-- ========== ABOUT ========== -->
+<section class="section section-bg" id="about">
+	<div class="container">
+		<div class="section-header fade-up">
+			<div class="tag"><i class="fa-solid fa-om"></i> हमारे बारे में / About Us</div>
+			<h2>बालकेश्वर धाम मंदिर</h2>
+			<div class="hindi-sub">नटखट नंदलाल का पवित्र धाम</div>
+			<p>Balkeshwar Dham is a sacred temple dedicated to the childhood form (Bal Swarup) of Lord Shri Krishna in Khokhara village.</p>
+		</div>
+		<div class="about-grid">
+			<div class="about-img fade-up">
+				<img src="img/1.jpg" alt="बालकेश्वर धाम मंदिर">
+				<div class="badge-float">
+					<div class="num">🙏</div>
+					<div class="label">बाल गोपाल</div>
+				</div>
 			</div>
-	 </div>
-	 <div class="watch_1l2 position-absolute text-center top-0 w-100 h-100 bg_back">
-	     <span><a class="d-inline-block bg_oran text-white text-center hvr-grow" href="#"><i class="fa fa-play"></i></a></span>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-6 ps-0">
-     <div class="watch_1r">
-	   <h6 class="col_oran">
-October 9, 2021</h6>
-<h2 class="mt-3 mb-3">श्री कृष्ण की महिमा</h2>
-<p class="mb-0">बालकेश्वर धाम खोंखरा में आपका स्वागत है। यह धाम बाल कृष्ण की मनमोहक लीलाओं और उनके बाल स्वरूप का प्रतीक है।. This is where you should start Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod This is where you should start Lorem ipsum dolor sit amet consectetur</p>
-	 </div>
-	</div>
-  </div>
-  <div class="watch_2 row mt-5">
-    <div class="col-md-3 col-sm-6">
-     <div class="watch_2m">
-	   <div class="watch_2l position-relative">
-	   <div class="watch_2l1">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/9.jpg" class="w-100" alt="img25"></a>
-			</figure>
+			<div class="about-text fade-up">
+				<h3>श्री कृष्ण का बाल स्वरूप — <br>बालकेश्वर धाम</h3>
+				<p>बालकेश्वर धाम खोंखरा, सोजत (पाली, राजस्थान) में स्थित यह पवित्र मंदिर भगवान श्री कृष्ण के बाल स्वरूप (बाल गोपाल / लड्डू गोपाल) को समर्पित है।</p>
+				<p>यहाँ भगवान कृष्ण के बचपन की मनमोहक लीलाओं — माखन चोरी, गोवर्धन धारण, कालिया नाग दमन — का स्मरण किया जाता है। This temple celebrates the divine childhood of Lord Krishna, the butter-stealing Nandlal.</p>
+				<div class="about-features">
+					<div class="about-feature">
+						<i class="fa-solid fa-hands-praying"></i>
+						<div>
+							<h5>नित्य पूजा</h5>
+							<span>Daily Worship & Aarti</span>
+						</div>
+					</div>
+					<div class="about-feature">
+						<i class="fa-solid fa-music"></i>
+						<div>
+							<h5>भजन कीर्तन</h5>
+							<span>Devotional Songs</span>
+						</div>
+					</div>
+					<div class="about-feature">
+						<i class="fa-solid fa-bowl-food"></i>
+						<div>
+							<h5>प्रसाद वितरण</h5>
+							<span>Prasad Distribution</span>
+						</div>
+					</div>
+					<div class="about-feature">
+						<i class="fa-solid fa-calendar-days"></i>
+						<div>
+							<h5>उत्सव आयोजन</h5>
+							<span>Festival Celebrations</span>
+						</div>
+					</div>
+				</div>
 			</div>
-	 </div>
-	 <div class="watch_2l2 position-absolute text-center top-0 w-100 h-100 bg_back">
-	     <span><a class="d-inline-block bg_oran text-white text-center hvr-grow" href="#"><i class="fa fa-play"></i></a></span>
-	 </div>
-	 </div>
-	 <div class="watch_2l3 mt-3">
-	    <h5 class="mb-0"><a class="col_blue" href="#">Lorem Amet</a></h5>
-	 </div>
-	 </div>
-	</div>	
-	<div class="col-md-3 col-sm-6">
-     <div class="watch_2m">
-	   <div class="watch_2l position-relative">
-	   <div class="watch_2l1">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/10.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	 <div class="watch_2l2 position-absolute text-center top-0 w-100 h-100 bg_back">
-	     <span><a class="d-inline-block bg_oran text-white text-center hvr-grow" href="#"><i class="fa fa-play"></i></a></span>
-	 </div>
-	 </div>
-	 <div class="watch_2l3 mt-3">
-	    <h5 class="mb-0"><a class="col_blue" href="#">Dolor Porta</a></h5>
-	 </div>
-	 </div>
+		</div>
 	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="watch_2m">
-	   <div class="watch_2l position-relative">
-	   <div class="watch_2l1">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/11.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	 <div class="watch_2l2 position-absolute text-center top-0 w-100 h-100 bg_back">
-	     <span><a class="d-inline-block bg_oran text-white text-center hvr-grow" href="#"><i class="fa fa-play"></i></a></span>
-	 </div>
-	 </div>
-	 <div class="watch_2l3 mt-3">
-	    <h5 class="mb-0"><a class="col_blue" href="#">Ipsum Quis</a></h5>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="watch_2m">
-	   <div class="watch_2l position-relative">
-	   <div class="watch_2l1">
-	    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/12.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	 </div>
-	 <div class="watch_2l2 position-absolute text-center top-0 w-100 h-100 bg_back">
-	     <span><a class="d-inline-block bg_oran text-white text-center hvr-grow" href="#"><i class="fa fa-play"></i></a></span>
-	 </div>
-	 </div>
-	 <div class="watch_2l3 mt-3">
-	    <h5 class="mb-0"><a class="col_blue" href="#">Sem Nulla</a></h5>
-	 </div>
-	 </div>
-	</div>
-  </div>
-</div>
 </section>
 
-<section id="minist" class="p_4 bg-light">
-<div class="container-xl">
-  <div class="donate_1 row mb-5">
-    <div class="col-md-4">
-     <div class="donate_1l">
-	   	  <h5 class="col_oran fs-6 mt-3">+  MINISTRIES +</h5>
-	  <h1 class="mb-0 font_50 mt-3">हमारे सेवा कार्य</h1>
-	 </div>
-	</div>
-	<div class="col-md-8">
-     <div class="donate_1r text-end">
-	   	<ul class="nav nav-tabs mb-0">
-<li class="nav-item d-inline-block">
-<a href="#profile1" data-bs-toggle="tab" aria-expanded="true" class="nav-link active">
-<span class="d-md-block"> All</span>
-</a>
-</li>
-
-<li class="nav-item d-inline-block">
-<a href="#profile2" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
-<span class="d-md-block"> Temple</span>
-</a>
-</li>
-<li class="nav-item d-inline-block">
-<a href="#profile3" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
-<span class="d-md-block"> Campus</span>
-</a>
-</li>
-
-<li class="nav-item d-inline-block">
-<a href="#profile4" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
-<span class="d-md-block"> Relations</span>
-</a>
-</li>
-
-<li class="nav-item d-inline-block">
-<a href="#profile5" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
-<span class="d-md-block"> Religion</span>
-</a>
-</li>
-</ul>
-	 </div>
-	</div>
-  </div>
-  <div class="minist_1 row">
-     <div class="tab-content">
-
-<div class="tab-pane active" id="profile1">
-      <div class="minist_1m row">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/13.jpg" class="w-100" alt="img25"></a>
-			</figure>
+<!-- ========== AARTI TIMINGS ========== -->
+<section class="section" id="darshan">
+	<div class="container">
+		<div class="section-header fade-up">
+			<div class="tag"><i class="fa-solid fa-om"></i> आरती का समय / Aarti Timings</div>
+			<h2>दर्शन एवं आरती</h2>
+			<div class="hindi-sub">प्रतिदिन आरती एवं भोग का समय</div>
+			<p>Every day, divine aarti and bhog are offered to Bal Gopal at these sacred timings.</p>
+		</div>
+		<div class="aarti-cards">
+			<div class="aarti-card fade-up">
+				<div class="icon"><i class="fa-solid fa-sun"></i></div>
+				<h4>Mangala Aarti</h4>
+				<div class="hindi-name">मंगला आरती (प्रातःकालीन)</div>
+				<div class="time">🌅 सुबह 5:30</div>
+				<p>दिन की पहली आरती — भगवान को जगाने की पावन बेला। The first aarti of the day to awaken the Lord.</p>
+			</div>
+			<div class="aarti-card fade-up">
+				<div class="icon"><i class="fa-solid fa-bell"></i></div>
+				<h4>Sandhya Aarti</h4>
+				<div class="hindi-name">संध्या आरती (सायंकालीन)</div>
+				<div class="time">🌇 शाम 7:00</div>
+				<p>संध्या काल की दिव्य आरती — दीप प्रज्ज्वलन एवं भजन। Evening aarti with lamp lighting and devotional hymns.</p>
+			</div>
+			<div class="aarti-card fade-up">
+				<div class="icon"><i class="fa-solid fa-moon"></i></div>
+				<h4>Shayan Aarti</h4>
+				<div class="hindi-name">शयन आरती (रात्रिकालीन)</div>
+				<div class="time">🌙 रात 9:00</div>
+				<p>भगवान को शयन कराने की आरती — दिन की अंतिम सेवा। The final aarti to put the Lord to rest for the night.</p>
 			</div>
 		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Lorem’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
 	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/14.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Ipsum’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/15.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Dolor’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-	  <div class="minist_1m row mt-4">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/16.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Web Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/17.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Help Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/18.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Event Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-	  <div class="minist_1m row mt-4">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/19.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Sed’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/20.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Amet’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/21.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Temple Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-</div>
-
-<div class="tab-pane" id="profile2">
-      <div class="minist_1m row">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/19.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Sed’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/20.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Amet’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/21.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Temple Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-</div>
-
-<div class="tab-pane" id="profile3">
-    <div class="minist_1m row">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/16.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Web Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/17.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Help Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/18.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Event Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-</div>
-
-<div class="tab-pane" id="profile4">
-      <div class="minist_1m row">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/13.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Lorem’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/14.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Ipsum’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/15.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Dolor’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-</div>
-
-<div class="tab-pane" id="profile5">
-    <div class="minist_1m row">
-	    <div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/19.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Sed’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/20.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Amet’s Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="minist_1i position-relative">
-	    <div class="minist_1i1">
-		  <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/21.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		</div>
-		<div class="minist_1i2 position-absolute top-0 p-3">
-		  <span><a class="bg_oran text-white d-inline-block text-center" href="#"><i class="fa fa-plus"></i></a></span>
-		</div>
-		<div class="minist_1i3  p-3 bg_back position-absolute  w-100">
-		  <h4><a class="text-white a_tag" href="#">Temple Ministry</a></h4>
-		  
-		</div>
-	  </div>
-	</div>
-	  </div>
-</div>
-
-</div>
-    
-  </div>
-</div>
 </section>
 
-<section id="team">
-<div class="team_m">
-    <div class="container-xl">
-  <div class="donate_1 row text-center mb-5">
-    <div class="col-md-12">
-	  <h5 class="col_oran fs-6 mt-3">+  WHO +</h5>
-	  <h1 class="mb-0 font_50 text-white mt-3">Our Volunteers</h1>
+<!-- ========== GALLERY ========== -->
+<section class="section section-bg" id="gallery">
+	<div class="container">
+		<div class="section-header fade-up">
+			<div class="tag"><i class="fa-solid fa-om"></i> दर्शन / Temple Gallery</div>
+			<h2>मंदिर की झलकियाँ</h2>
+			<div class="hindi-sub">बालकेश्वर धाम के दिव्य दृश्य</div>
+			<p>Glimpses of the divine beauty of Balkeshwar Dham temple and its surroundings.</p>
+		</div>
+		<div class="gallery-grid fade-up">
+			<div class="gallery-item"><img src="img/1.jpg" alt="बालकेश्वर धाम मंदिर"></div>
+			<div class="gallery-item"><img src="img/2.jpg" alt="मंदिर का दृश्य"></div>
+			<div class="gallery-item"><img src="img/3.jpg" alt="मंदिर प्रांगण"></div>
+			<div class="gallery-item"><img src="img/8.jpg" alt="मंदिर की सजावट"></div>
+			<div class="gallery-item"><img src="img/13.jpg" alt="पूजा स्थल"></div>
+			<div class="gallery-item"><img src="img/14.jpg" alt="आरती"></div>
+		</div>
 	</div>
-  </div>
-  <div class="team_1 row">
-    <div class="col-md-3 col-sm-6">
-     <div class="team_1i">
-	   <div class="team_1i1 position-relative">
-	     <div class="team_1i1i text-center">
-	      <a href="#"><img src="img/23.jpg" class="rounded-circle" alt="abc"></a>
-	   </div>
-	   <div class="team_1i1i1 position-absolute w-100 text-end">
-	     <span><a class="bg_blue text-white d-inline-block text-center rounded-circle hvr-forward" href="#"><i class="fa fa-plus"></i></a></span>
-	   </div>
-	   </div>
-	   <div class="team_1i2 text-center mt-3">
-	     <h6 class="col_oran">TEAM MEMBER</h6>
-		 <h4 class="mb-0"><a class="text-white" href="#">Lorem Amet</a></h4>
-	   </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="team_1i">
-	   <div class="team_1i1 position-relative">
-	     <div class="team_1i1i text-center">
-	      <a href="#"><img src="img/24.jpg" class="rounded-circle" alt="abc"></a>
-	   </div>
-	   <div class="team_1i1i1 position-absolute w-100 text-end">
-	     <span><a class="bg_blue text-white d-inline-block text-center rounded-circle hvr-forward" href="#"><i class="fa fa-plus"></i></a></span>
-	   </div>
-	   </div>
-	   <div class="team_1i2 text-center mt-3">
-	     <h6 class="col_oran">TEAM MEMBER</h6>
-		 <h4 class="mb-0"><a class="text-white" href="#">Nulla Sed</a></h4>
-	   </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="team_1i">
-	   <div class="team_1i1 position-relative">
-	     <div class="team_1i1i text-center">
-	      <a href="#"><img src="img/25.jpg" class="rounded-circle" alt="abc"></a>
-	   </div>
-	   <div class="team_1i1i1 position-absolute w-100 text-end">
-	     <span><a class="bg_blue text-white d-inline-block text-center rounded-circle hvr-forward" href="#"><i class="fa fa-plus"></i></a></span>
-	   </div>
-	   </div>
-	   <div class="team_1i2 text-center mt-3">
-	     <h6 class="col_oran">TEAM MEMBER</h6>
-		 <h4 class="mb-0"><a class="text-white" href="#">Ipsum Quis</a></h4>
-	   </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="team_1i">
-	   <div class="team_1i1 position-relative">
-	     <div class="team_1i1i text-center">
-	      <a href="#"><img src="img/26.jpg" class="rounded-circle" alt="abc"></a>
-	   </div>
-	   <div class="team_1i1i1 position-absolute w-100 text-end">
-	     <span><a class="bg_blue text-white d-inline-block text-center rounded-circle hvr-forward" href="#"><i class="fa fa-plus"></i></a></span>
-	   </div>
-	   </div>
-	   <div class="team_1i2 text-center mt-3">
-	     <h6 class="col_oran">TEAM MEMBER</h6>
-		 <h4 class="mb-0"><a class="text-white" href="#">Dolor Porta</a></h4>
-	   </div>
-	 </div>
-	</div>
-  </div>
-</div> 
- </div>
-
 </section>
 
-<section id="testim" class="p_4">
-<div class="container-fluid">
-  <div class="testim_1 row">
-    <div class="col-md-5">
-     <div class="testim_1l px-5">
-	   	  <h5 class="col_oran fs-6 mt-3">+   TESTIMONIALS +</h5>
-	  <h1 class="mb-3 font_50 mt-3">What Our Members Say</h1>
-	  <p class="mb-0">बालकेश्वर धाम खोंखरा में आपका स्वागत है। यह धाम बाल कृष्ण की मनमोहक लीलाओं और उनके बाल स्वरूप का प्रतीक है।. This is where you should start Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod</p>
-	 </div>
-	</div>
-	<div class="col-md-7 pe-0">
-	  <div class="testim_m position-relative">
-	    <div class="testim_m1">
-		  <div class="testim_1r bg_blue carousel_p px-4">
-	   <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-	 <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="testim_1ri row">
-	     <div class="col-md-12">
-		   <span class="col_oran font_50 lh-1"><i class="fa fa-quote-right"></i></span>
-		   <p class="text-white mt-3">Curabitur convallis enim at orci ullamcorper sagittis. Morbi porand gon nullalacu scelerisque in aliquam vitae, aliquam ut lectus. Nam utte mink Phasellus magna, efficitur finibus dictum auctor.</p>
-		   <h5 class="mt-4 text-light">Lorem Amet</h5>
-		 </div>
-	   </div>
-	   
-    </div>
-    <div class="carousel-item">
-        <div class="testim_1ri row">
-	     <div class="col-md-12">
-		   <span class="col_oran font_50 lh-1"><i class="fa fa-quote-right"></i></span>
-		   <p class="text-white mt-3">Curabitur convallis enim at orci ullamcorper sagittis. Morbi porand gon nullalacu scelerisque in aliquam vitae, aliquam ut lectus. Nam utte mink Phasellus magna, efficitur finibus dictum auctor.</p>
-		   <h5 class="mt-4 text-light">Dolor Porta</h5>
-		 </div>
-	   </div>
-    </div>
-	<div class="carousel-item">
-        <div class="testim_1ri row">
-	     <div class="col-md-12">
-		   <span class="col_oran font_50 lh-1"><i class="fa fa-quote-right"></i></span>
-		   <p class="text-white mt-3">Curabitur convallis enim at orci ullamcorper sagittis. Morbi porand gon nullalacu scelerisque in aliquam vitae, aliquam ut lectus. Nam utte mink Phasellus magna, efficitur finibus dictum auctor.</p>
-		   <h5 class="mt-4 text-light">Augue Nulla</h5>
-		 </div>
-	   </div>
-    </div>
-  </div>
-</div>
-	 </div>
+<!-- ========== DONATION ========== -->
+<section class="section donate-section" id="donate">
+	<div class="container">
+		<div class="donate-content">
+			<div class="donate-text fade-up">
+				<div class="tag" style="color: var(--gold-light);"><i class="fa-solid fa-om"></i> सहयोग / Contribute</div>
+				<h2>मंदिर निर्माण एवं सेवा कार्यों में अपना सहयोग दें</h2>
+				<p>बालकेश्वर धाम मंदिर के निर्माण, जीर्णोद्धार, और सेवा कार्यों में आपका हर छोटा-बड़ा दान महत्वपूर्ण है। आपके सहयोग से बाल गोपाल की सेवा और भव्य बनेगी।</p>
+				<p>Your contribution, no matter how small, helps in the construction, renovation, and daily worship services of Balkeshwar Dham. Every donation is a step towards divine service.</p>
+				<a href="donation.html" class="btn-primary-custom">
+					<i class="fa-solid fa-hand-holding-heart"></i> दान करें / Donate Now
+				</a>
+			</div>
+			<div class="donate-info fade-up">
+				<h3>🙏 दान के प्रकार</h3>
+				<p>Types of Donations You Can Make</p>
+				<div style="color: rgba(255,255,255,0.8); font-size: 14px;">
+					<div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px;">
+						<span style="color: var(--gold-light); font-size: 18px;">🏛️</span>
+						<div><strong>मंदिर निर्माण</strong><br><span style="font-size: 12px; opacity: 0.7;">Temple Construction</span></div>
+					</div>
+					<div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px;">
+						<span style="color: var(--gold-light); font-size: 18px;">🍲</span>
+						<div><strong>अन्नदान (भोजन सेवा)</strong><br><span style="font-size: 12px; opacity: 0.7;">Food Service (Bhandara)</span></div>
+					</div>
+					<div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px;">
+						<span style="color: var(--gold-light); font-size: 18px;">🪔</span>
+						<div><strong>दीप दान (ज्योति)</strong><br><span style="font-size: 12px; opacity: 0.7;">Lamp Donation</span></div>
+					</div>
+					<div style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+						<span style="color: var(--gold-light); font-size: 18px;">🌸</span>
+						<div><strong>पुष्प एवं श्रृंगार सेवा</strong><br><span style="font-size: 12px; opacity: 0.7;">Flower & Decoration Service</span></div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="testim_m2 position-absolute w-100">
-		  <div class="testim_1rm2i row mx-0 px-2">
-		    <div class="col-md-4 px-2">
-			  <div class="testim_1rm2il">
-			    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/65.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-			  </div>
-			</div>
-			<div class="col-md-4 px-2">
-			  <div class="testim_1rm2im">
-			    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/28.png"  class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-			  </div>
-			</div>
-			<div class="col-md-4 px-2">
-			  <div class="testim_1rm2il">
-			    <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/66.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-     
 	</div>
-  </div>
-</div>
 </section>
 
-<section id="shop" class="p_4 pt-0">
-<div class="container-xl">
-  <div class="donate_1 row text-center mb-5">
-    <div class="col-md-12">
-	  <h5 class="col_oran fs-6 mt-3">+ TRENDING ONE  +</h5>
-	  <h1 class="mb-0 font_50 mt-3">Temple Products</h1>
-	</div>
-  </div>
-  <div class="shop_1 row">
-    <div class="col-md-3 col-sm-6">
-     <div class="shop_1im text-center border_1 p-4 hvr-curl-top-right">
-	    <div class="shop_1im1 position-relative">
-	     <div class="shop_1im1i">
-	       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/30.png" class="w-100" alt="img25"></a>
-			</figure>
+<!-- ========== LOCATION ========== -->
+<section class="section" id="location">
+	<div class="container">
+		<div class="section-header fade-up">
+			<div class="tag"><i class="fa-solid fa-om"></i> स्थान / Location</div>
+			<h2>कैसे पहुँचें?</h2>
+			<div class="hindi-sub">बालकेश्वर धाम का पता एवं मार्गदर्शन</div>
+			<p>How to reach Balkeshwar Dham Mandir in Khokhara, Sojat, Rajasthan.</p>
+		</div>
+		<div class="location-grid">
+			<div class="location-map fade-up">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600!2d73.6!3d25.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzAwLjAiTiA3M8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" title="बालकेश्वर धाम मानचित्र"></iframe>
 			</div>
-	    </div>
-		<div class="shop_1im1i1 position-absolute w-100 top-0">
-	      <ul class="mb-0">
-		    <li class="d-inline-block"><a class="hvr-grow" href="#"><i class="fa fa-eye"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-shopping-basket"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-heart"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-recycle"></i></a></li>
-		  </ul>
-	    </div>
-	    </div>
-	    <div class="shop_1im2 mt-3">
-	     <span class="font_13 text-warning">
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star-half-alt"></i>
-		 </span>
-		 <h5 class="mt-3"><a href="#">Lorem Porta</a></h5>
-		 <h6 class="mb-0 mt-3 col_oran fw-bold"><span class="text-decoration-line-through fw-normal text-muted me-1">$40.00</span> $37.00</h6>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="shop_1im text-center border_1 p-4 hvr-curl-top-right">
-	    <div class="shop_1im1 position-relative">
-	     <div class="shop_1im1i">
-	       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/31.png" class="w-100" alt="img25"></a>
-			</figure>
+			<div class="location-details fade-up">
+				<div class="location-item">
+					<div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+					<div>
+						<h5>पता / Address</h5>
+						<p>बालकेश्वर धाम मंदिर, ग्राम खोंखरा<br>306306, सोजत, जिला पाली, राजस्थान</p>
+					</div>
+				</div>
+				<div class="location-item">
+					<div class="icon"><i class="fa-solid fa-train"></i></div>
+					<div>
+						<h5>निकटतम रेलवे स्टेशन</h5>
+						<p>सोजत रोड रेलवे स्टेशन (Sojat Road Railway Station) — लगभग 15 किमी</p>
+					</div>
+				</div>
+				<div class="location-item">
+					<div class="icon"><i class="fa-solid fa-bus"></i></div>
+					<div>
+						<h5>बस मार्ग</h5>
+						<p>पाली-सोजत मार्ग पर स्थित। राजस्थान रोडवेज बसें उपलब्ध हैं।</p>
+					</div>
+				</div>
+				<div class="location-item">
+					<div class="icon"><i class="fa-solid fa-clock"></i></div>
+					<div>
+						<h5>दर्शन का समय</h5>
+						<p>प्रतिदिन सुबह 5:00 बजे से रात 9:30 बजे तक<br>Open Daily: 5:00 AM — 9:30 PM</p>
+					</div>
+				</div>
 			</div>
-	    </div>
-		<div class="shop_1im1i1 position-absolute w-100 top-0">
-	      <ul class="mb-0">
-		    <li class="d-inline-block"><a class="hvr-grow" href="#"><i class="fa fa-eye"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-shopping-basket"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-heart"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-recycle"></i></a></li>
-		  </ul>
-	    </div>
-	    </div>
-	    <div class="shop_1im2 mt-3">
-	     <span class="font_13 text-warning">
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star-half-alt"></i>
-		 </span>
-		 <h5 class="mt-3"><a href="#">Dolor Quis</a></h5>
-		 <h6 class="mb-0 mt-3 col_oran fw-bold"><span class="text-decoration-line-through fw-normal text-muted me-1">$48.00</span> $39.00</h6>
-	 </div>
-	 </div>
+		</div>
 	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="shop_1im text-center border_1 p-4 hvr-curl-top-right">
-	    <div class="shop_1im1 position-relative">
-	     <div class="shop_1im1i">
-	       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/32.png" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	    </div>
-		<div class="shop_1im1i1 position-absolute w-100 top-0">
-	      <ul class="mb-0">
-		    <li class="d-inline-block"><a class="hvr-grow" href="#"><i class="fa fa-eye"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-shopping-basket"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-heart"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-recycle"></i></a></li>
-		  </ul>
-	    </div>
-	    </div>
-	    <div class="shop_1im2 mt-3">
-	     <span class="font_13 text-warning">
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star-half-alt"></i>
-		 </span>
-		 <h5 class="mt-3"><a href="#">Sem Augue</a></h5>
-		 <h6 class="mb-0 mt-3 col_oran fw-bold"><span class="text-decoration-line-through fw-normal text-muted me-1">$50.00</span> $47.00</h6>
-	 </div>
-	 </div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-     <div class="shop_1im text-center border_1 p-4 hvr-curl-top-right">
-	    <div class="shop_1im1 position-relative">
-	     <div class="shop_1im1i">
-	       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/33.png" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	    </div>
-		<div class="shop_1im1i1 position-absolute w-100 top-0">
-	      <ul class="mb-0">
-		    <li class="d-inline-block"><a class="hvr-grow" href="#"><i class="fa fa-eye"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-shopping-basket"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-heart"></i></a></li>
-			<li class="d-inline-block ms-1"><a class="hvr-grow" href="#"><i class="fa fa-recycle"></i></a></li>
-		  </ul>
-	    </div>
-	    </div>
-	    <div class="shop_1im2 mt-3">
-	     <span class="font_13 text-warning">
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star"></i>
-		  <i class="fa fa-star-half-alt"></i>
-		 </span>
-		 <h5 class="mt-3"><a href="#">Eget Sit</a></h5>
-		 <h6 class="mb-0 mt-3 col_oran fw-bold"><span class="text-decoration-line-through fw-normal text-muted me-1">$53.00</span> $43.00</h6>
-	 </div>
-	 </div>
-	</div>
-  </div>
-</div>
 </section>
 
-<section id="blog">
-<div class="team_m">
-    <div class="container-xl">
-  <div class="donate_1 row text-center mb-5">
-    <div class="col-md-12">
-	  <h5 class="col_oran fs-6 mt-3">+  BLOG  +</h5>
-	  <h1 class="mb-0 font_50 text-white mt-3">News Feed</h1>
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+	<div class="container">
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<img src="img/bal-krishna-logo.png" alt="बालकेश्वर धाम">
+				<h3>बालकेश्वर धाम</h3>
+				<div class="sub">मंदिर खोंखरा — बाल कृष्ण का पवित्र धाम</div>
+				<p>श्री कृष्ण के बाल स्वरूप को समर्पित यह पवित्र धाम खोंखरा ग्राम, सोजत (पाली), राजस्थान में स्थित है। A sacred temple dedicated to the childhood form of Lord Krishna.</p>
+			</div>
+			<div>
+				<h4>त्वरित लिंक</h4>
+				<div class="footer-links">
+					<a href="index.html"><i class="fa-solid fa-chevron-right"></i> मुख्य पृष्ठ (Home)</a>
+					<a href="about.html"><i class="fa-solid fa-chevron-right"></i> हमारे बारे में (About)</a>
+					<a href="donation.html"><i class="fa-solid fa-chevron-right"></i> दान करें (Donate)</a>
+					<a href="contact.html"><i class="fa-solid fa-chevron-right"></i> संपर्क करें (Contact)</a>
+				</div>
+			</div>
+			<div>
+				<h4>पता / Address</h4>
+				<div class="footer-links">
+					<a href="#"><i class="fa-solid fa-location-dot"></i> ग्राम खोंखरा, 306306</a>
+					<a href="#"><i class="fa-solid fa-city"></i> सोजत, जिला पाली</a>
+					<a href="#"><i class="fa-solid fa-flag"></i> राजस्थान, भारत</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>© 2025 <span>बालकेश्वर धाम मंदिर खोंखरा</span> — सर्वाधिकार सुरक्षित। ॥ जय श्री कृष्ण ॥</p>
+		</div>
 	</div>
-  </div>
-  <div class="blog_1 row">
-     <div class="col-md-4">
-	   <div class="blog_1i">
-	       <div class="blog_1i1">
-	         <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/35.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	   </div>
-	   <div class="blog_1i2 p-4 bg-white">
-	     <ul class="font_14">
-		    <li class="d-inline-block"><i class="fa fa-om col_oran me-1"></i> Temple, Pastor</li>
-			<li class="d-inline-block mx-2 text-muted">|</li>
-			 <li class="d-inline-block font_13"><i class="fa fa-calendar col_oran me-1"></i>  May 29, 2024</li>
-		  </ul>
-		  <h5 class="mt-3"><a href="#">Expecting new  issued cases</a></h5>
-		  <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard</p>
-		  <h6 class="fw-bold mb-0"><img src="img/23.jpg" width="40" height="40" class="rounded-circle me-2" alt="abc"> <span class="text-muted fw-normal">By</span> <a href="#">Lorem Porta</a></h6>
-	   </div>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="blog_1i">
-	       <div class="blog_1i1">
-	         <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/36.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	   </div>
-	   <div class="blog_1i2 p-4 bg-white">
-	     <ul class="font_14">
-		    <li class="d-inline-block"><i class="fa fa-om col_oran me-1"></i> Temple, Pastor</li>
-			<li class="d-inline-block mx-2 text-muted">|</li>
-			 <li class="d-inline-block font_13"><i class="fa fa-calendar col_oran me-1"></i>  May 26, 2024</li>
-		  </ul>
-		  <h5 class="mt-3"><a href="#">All we’ve discovered by now</a></h5>
-		  <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard</p>
-		  <h6 class="fw-bold mb-0"><img src="img/24.jpg" width="40" height="40" class="rounded-circle me-2" alt="abc"> <span class="text-muted fw-normal">By</span> <a href="#">Dolor Amet</a></h6>
-	   </div>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="blog_1i">
-	       <div class="blog_1i1">
-	         <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/37.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-	   </div>
-	   <div class="blog_1i2 p-4 bg-white">
-	     <ul class="font_14">
-		    <li class="d-inline-block"><i class="fa fa-om col_oran me-1"></i> Temple, Pastor</li>
-			<li class="d-inline-block mx-2 text-muted">|</li>
-			 <li class="d-inline-block font_13"><i class="fa fa-calendar col_oran me-1"></i>  May 30, 2024</li>
-		  </ul>
-		  <h5 class="mt-3"><a href="#">We Who Believe In God</a></h5>
-		  <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard</p>
-		  <h6 class="fw-bold mb-0"><img src="img/25.jpg" width="40" height="40" class="rounded-circle me-2" alt="abc"> <span class="text-muted fw-normal">By</span> <a href="#">Ipsum Quis</a></h6>
-	   </div>
-	   </div>
-	 </div>
-  </div>
-</div> 
- </div>
+</footer>
 
-</section>
+<!-- Scroll To Top -->
+<button class="scroll-top" id="scrollTop" aria-label="ऊपर जाएं">
+	<i class="fa-solid fa-arrow-up"></i>
+</button>
 
-<div class="footer_m position-relative">
-  <div class="footer_m1">
-    <section id="footer" class="p_4 bg_blue">
-<div class="container-xl">
-   <div class="footer_1 row">
-     <div class="col-md-4">
-	   <div class="footer_1l">
-	     <h4 class="text-white mb-4">हमारे बारे में Us</h4>
-		 <p class="text-light">Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in</p>
-		 <ul class="mb-0 flex_box">
-<li class="d-flex text-light"><span class="me-3"><i class="fa fa-phone col_oran"></i></span> +123) 123 4567 890 </li>
-<li class="d-flex text-light mt-3"><span class="me-3"><i class="fa fa-envelope col_oran"></i></span> info@gmail.com </li>
-<li class="d-flex text-light mt-3"><span class="me-3"><i class="fa fa-map-marker col_oran"></i></span>  306306 , Sojat pali Rajasthan </li>
-</ul>
-	   </div>
-	 </div>
-	 <div class="col-md-2">
-	   <div class="footer_1l">
-	     <h4 class="text-white mb-4">Information</h4>
-         <div class="row footer_3ism">
-		 <h6 class="col-md-12 col-6"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Ministries</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Services</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Sermons</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Donations</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Volunteers</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2 mb-0"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Events</a></h6>
-	    </div>
-	   </div>
-	 </div>
-	 <div class="col-md-2">
-	   <div class="footer_1l">
-	     <h4 class="text-white mb-4">Others</h4>
-         <div class="row footer_3ism">
-		 <h6 class="col-md-12 col-6"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Shop</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Cart</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Checkout</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Blog</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> संपर्क करें</a></h6>
-	 <h6 class="col-md-12 col-6 mt-2 mb-0"><i class="fa fa-chevron-right col_oran me-1 font_13 align-middle"></i> <a class="text-light a_tag" href="#"> Policy</a></h6>
-	    </div>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="footer_1l">
-	     <h4 class="text-white mb-4">Recent Posts</h4>
-         <div class="footer_1li row">
-		  <div class="col-md-3 col-4">
-		   <div class="footer_1lil">
-		       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/13.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		   </div>
-		  </div>
-		  <div class="col-md-9 col-8">
-		   <div class="footer_1lir">
-	       <h6 class="font_13 text-white"><i class="fa fa-calendar col_oran me-1"></i> October 26, 2020</h6>
-		   <h5 class="mb-0 fs-6"><a class="text-light a_tag" href="#">All we’ve discovered by now</a></h5>
-		   </div>
-		  </div>
-		</div>
-		<div class="footer_1li row mt-4">
-		  <div class="col-md-3 col-4">
-		   <div class="footer_1lil">
-		       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/14.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		   </div>
-		  </div>
-		  <div class="col-md-9 col-8">
-		   <div class="footer_1lir">
-	       <h6 class="font_13 text-white"><i class="fa fa-calendar col_oran me-1"></i> October 28, 2020</h6>
-		   <h5 class="mb-0 fs-6"><a class="text-light a_tag" href="#">We Who Believe In God</a></h5>
-		   </div>
-		  </div>
-		</div>
-		<div class="footer_1li row mt-4">
-		  <div class="col-md-3 col-4">
-		   <div class="footer_1lil">
-		       <div class="grid clearfix">
-			<figure class="effect-jazz mb-0">
-			<a href="#"><img src="img/15.jpg" class="w-100" alt="img25"></a>
-			</figure>
-			</div>
-		   </div>
-		  </div>
-		  <div class="col-md-9 col-8">
-		   <div class="footer_1lir">
-	       <h6 class="font_13 text-white"><i class="fa fa-calendar col_oran me-1"></i> October 29, 2020</h6>
-		   <h5 class="mb-0 fs-6"><a class="text-light a_tag" href="#">Expecting new issued cases</a></h5>
-		   </div>
-		  </div>
-		</div>
-	   </div>
-	 </div>
-   </div>
-</div>
-</section>
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+const scrollTop = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 50) {
+		navbar.classList.add('scrolled');
+	} else {
+		navbar.classList.remove('scrolled');
+	}
+	if (window.scrollY > 400) {
+		scrollTop.classList.add('visible');
+	} else {
+		scrollTop.classList.remove('visible');
+	}
+});
 
-<section id="footer_b" class="bg_blue">
-<div class="container-xl">
-   <div class="footer_b1 row">
-     <div class="col-md-5">
-	   <div class="footer_b1l">
-	     <p class="mb-0 text-light">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_oran fw-bold" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
-	   </div>
-	 </div>
-	 <div class="col-md-3">
-	   <div class="footer_b1m p-4 bg-white">
-	     <h3 class="mb-0"><a  href="index.html"><i class="fa-solid fa-om me-1 col_oran"></i> Balkeshwar Dham <br>
-<span class="fw-normal font_14 text-muted">mandir Khokhara</span>
-</a></h3>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="footer_b1r text-end">
-	     <ul class="mb-0">
-	    <li class="d-inline-block"><a class="d-block text-center" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-		<li class="d-inline-block ms-2"><a class="d-block text-center" href="#"><i class="fa-brands fa-twitter"></i></a></li>
-		<li class="d-inline-block ms-2"><a class="d-block text-center" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-		<li class="d-inline-block ms-2"><a class="d-block text-center" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-	  </ul>
-	   </div>
-	 </div>
-   </div>
-</div>
-</section>
-  </div>
-  <div class="footer_m2 position-absolute w-100">
-    <section id="subs" class="p_3">
-  <div class="container-xl">
-    <div class="subs1 row mx-0 bg-white p-5 px-3 shadow_box">
-      <div class="col-md-6">
-	    <div class="subs1l">
-         <h2>Subscribe To Our Newsletter</h2>
-		 <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-		</div>
-	  </div>	
-	  <div class="col-md-6">
-	    <div class="subs1r mt-4">
-		  <div class="input-group">
-			<input type="text" class="form-control font_14" placeholder="Your Email">
-			<span class="input-group-btn">
-				<button class="btn btn-primary bg_oran border-0 rounded-0 p-3 px-4" type="button">
-					Subscribe </button>
-			</span>
-		</div>
-		</div>
-	  </div>
-	</div>
-	
-  </div>  
-</section>
-  </div>
-</div>
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+	navToggle.classList.toggle('active');
+	navLinks.classList.toggle('open');
+});
 
+// Close mobile nav on link click
+navLinks.querySelectorAll('a').forEach(link => {
+	link.addEventListener('click', () => {
+		navToggle.classList.remove('active');
+		navLinks.classList.remove('open');
+	});
+});
 
+// Scroll to top
+scrollTop.addEventListener('click', () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-<script src="js/common.js"></script>
-
+// Fade-up animation on scroll
+const fadeEls = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('visible');
+		}
+	});
+}, { threshold: 0.15 });
+fadeEls.forEach(el => observer.observe(el));
+</script>
 
 </body>
-
-
 </html>
-
