@@ -27,7 +27,7 @@
 
 		/* NAV */
 		.nv{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,248,240,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:2px solid var(--bl);transition:all .3s}
-		.nv.sc{box-shadow:0 2px 30px rgba(107,15,26,.12)}
+		.nv.scr{box-shadow:0 2px 30px rgba(107,15,26,.12)}
 		.nv-i{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
 		.nv-b{display:flex;align-items:center;gap:10px}
 		.nv-b img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gd);object-fit:cover}
@@ -50,7 +50,7 @@
 		.hr{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:70px}
 		.hr-bg{position:absolute;inset:0;z-index:0}
 		.hr-bg img{width:100%;height:100%;object-fit:cover}
-		.hr-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(61,10,16,.92),rgba(107,15,26,.85) 50%,rgba(255,107,0,.7))}
+		.hr-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(61,10,16,.9) 0%,rgba(107,15,26,.4) 50%,rgba(0,0,0,.2) 100%);pointer-events:none;}
 		.hr::after{content:'ॐ';position:absolute;right:-60px;bottom:-40px;font-size:300px;color:rgba(255,255,255,.03);font-weight:900;pointer-events:none;z-index:1}
 		.hr-c{text-align:center;padding:40px 20px;max-width:860px;position:relative;z-index:2}
 		.hr-e{font-size:40px;margin-bottom:12px;animation:fl 3s ease-in-out infinite}
@@ -193,7 +193,7 @@
 
 <!-- HERO -->
 <section class="hr" id="home">
-	<div class="hr-bg"><img src="assets/photos/mandir-entrance.png" alt="Balkeshwar Dham Mandir" width="1200" height="675" fetchpriority="high"></div>
+	<div class="hr-bg"><img src="assets/photos/hero-banner.png" alt="Balkeshwar Dham Mandir" width="1200" height="675" fetchpriority="high" style="transform:scale(1.05);object-fit:cover;"></div>
 	<div class="hr-c">
 		<div class="hr-e">🙏</div>
 		<img src="assets/photos/bal-krishna-logo.png" alt="Bal Krishna" class="hr-lg" width="100" height="100">
@@ -305,7 +305,7 @@
 
 <script>
 var nb=document.getElementById('nb'),s=document.getElementById('st');
-window.addEventListener('scroll',function(){nb.classList.toggle('sc',window.scrollY>50);s.classList.toggle('v',window.scrollY>400)});
+window.addEventListener('scroll',function(){nb.classList.toggle('scr',window.scrollY>50);s.classList.toggle('v',window.scrollY>400)});
 var nt=document.getElementById('nt'),nl=document.getElementById('nl');
 nt.addEventListener('click',function(){nt.classList.toggle('on');nl.classList.toggle('op')});
 nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nt.classList.remove('on');nl.classList.remove('op')})});
