@@ -116,13 +116,15 @@
 		<div class="msg-box">
 			<h3>🙏 Send Us a Message</h3>
 			<div class="sb">संदेश भेजें</div>
-			<form>
+			<form action="https://formsubmit.co/ymrajput334@gmail.com" method="POST">
+				<input type="hidden" name="_subject" value="New Message from Balkeshwar Dham Website!">
+				<input type="hidden" name="_captcha" value="false">
 				<div class="fr">
-					<div class="fg"><label>Your Name / आपका नाम</label><input type="text" placeholder="Enter name..."></div>
-					<div class="fg"><label>Email / ईमेल</label><input type="email" placeholder="Enter email..."></div>
+					<div class="fg"><label>Your Name / आपका नाम</label><input type="text" name="Name" placeholder="Enter name..." required></div>
+					<div class="fg"><label>Email / ईमेल</label><input type="email" name="Email" placeholder="Enter email..." required></div>
 				</div>
-				<div class="fg"><label>Subject / विषय</label><input type="text" placeholder="Enter subject..."></div>
-				<div class="fg"><label>Your Message / आपका संदेश</label><textarea placeholder="Write your message here..."></textarea></div>
+				<div class="fg"><label>Subject / विषय</label><input type="text" name="Subject" placeholder="Enter subject..." required></div>
+				<div class="fg"><label>Your Message / आपका संदेश</label><textarea name="Message" placeholder="Write your message here..." required></textarea></div>
 				<button type="submit" class="sb-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
 			</form>
 		</div>
