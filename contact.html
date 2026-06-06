@@ -4,240 +4,136 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>संपर्क करें | बालकेश्वर धाम मंदिर खोंखरा</title>
-	<meta name="description" content="बालकेश्वर धाम मंदिर खोंखरा से संपर्क करें। पता: 306306, सोजत, पाली, राजस्थान।">
+	<title>Contact Us — Balkeshwar Dham Mandir Khokhara</title>
+	<meta name="description" content="Contact Balkeshwar Dham Mandir Khokhara. Address, visiting hours, and map directions.">
 	<link rel="icon" type="image/png" href="public/photos/bal-krishna-logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
-	<link href="fonts/css/fontawesome.min.css" rel="stylesheet">
-	<link href="fonts/css/brands.min.css" rel="stylesheet">
-	<link href="fonts/css/solid.min.css" rel="stylesheet">
+	<link rel="apple-touch-icon" href="public/photos/bal-krishna-logo.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+	<link href="fonts/css/fontawesome.min.css" rel="stylesheet"><link href="fonts/css/solid.min.css" rel="stylesheet">
 	<style>
-		*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-		html { scroll-behavior: smooth; overflow-x: hidden; }
-		body { font-family: 'Poppins', sans-serif; line-height: 1.7; color: #2d1810; background: #fffaf5; overflow-x: hidden; }
-		img { max-width: 100%; height: auto; display: block; }
-		a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-		ul { list-style: none; padding: 0; margin: 0; }
-		:root {
-			--saffron: #FF6B00; --saffron-light: #FF8C38; --gold: #D4A017; --gold-light: #F5D77A;
-			--maroon: #6B0F1A; --maroon-dark: #3D0A10; --cream: #FFF8F0; --text-muted: #7A6455;
-			--border-light: rgba(212,160,23,0.2); --shadow-soft: 0 4px 20px rgba(107,15,26,0.08);
-			--gradient-saffron: linear-gradient(135deg, #FF6B00 0%, #FF8C38 100%);
-			--gradient-maroon: linear-gradient(135deg, #6B0F1A 0%, #8B1A2B 100%);
-		}
-		.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+		*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{font-family:'Poppins',sans-serif;line-height:1.7;color:#2d1810;background:#fffaf5;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s ease}ul{list-style:none;padding:0;margin:0}
+		:root{--sf:#FF6B00;--sl:#FF8C38;--gd:#D4A017;--gl:#F5D77A;--mr:#6B0F1A;--md:#3D0A10;--cr:#FFF8F0;--tm:#7A6455;--bl:rgba(212,160,23,.2);--sh:0 4px 20px rgba(107,15,26,.08);--gs:linear-gradient(135deg,#FF6B00,#FF8C38);--gm:linear-gradient(135deg,#6B0F1A,#8B1A2B)}
+		.ctn{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+		img[loading="lazy"]{opacity:0;transition:opacity .4s}img[loading="lazy"].ld{opacity:1}
 
-		/* Nav */
-		.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,248,240,0.95); backdrop-filter: blur(20px); border-bottom: 2px solid var(--border-light); padding: 0; }
-		.navbar.scrolled { box-shadow: 0 2px 30px rgba(107,15,26,0.12); }
-		.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
-		.nav-brand { display: flex; align-items: center; gap: 12px; }
-		.nav-brand img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
-		.nav-brand-text h1 { font-size: 16px; font-weight: 800; color: var(--maroon); line-height: 1.2; margin: 0; }
-		.nav-brand-text span { font-size: 11px; color: var(--saffron); font-weight: 500; }
-		.nav-links { display: flex; align-items: center; gap: 8px; }
-		.nav-links a { padding: 10px 18px; font-size: 13px; font-weight: 600; color: var(--maroon); text-transform: uppercase; letter-spacing: 0.5px; border-radius: 8px; }
-		.nav-links a:hover, .nav-links a.active { color: var(--saffron); background: rgba(255,107,0,0.08); }
-		.nav-links a.active { position: relative; }
-		.nav-links a.active::after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 20px; height: 3px; background: var(--saffron); border-radius: 2px; }
-		.nav-donate-btn { background: var(--gradient-saffron) !important; color: #fff !important; padding: 10px 24px !important; border-radius: 50px !important; font-weight: 700 !important; }
-		.nav-donate-btn:hover { transform: translateY(-2px); color: #fff !important; }
-		.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
-		.nav-toggle span { width: 26px; height: 3px; background: var(--maroon); border-radius: 3px; transition: all 0.3s ease; }
-		.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,6px); }
-		.nav-toggle.active span:nth-child(2) { opacity: 0; }
-		.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-6px); }
+		/* NAV */
+		.nv{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,248,240,.96);backdrop-filter:blur(20px);border-bottom:2px solid var(--bl);transition:all .3s}.nv.sc{box-shadow:0 2px 30px rgba(107,15,26,.12)}
+		.nv-i{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+		.nv-b{display:flex;align-items:center;gap:10px}.nv-b img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gd);object-fit:cover}.nv-b h1{font-size:15px;font-weight:800;color:var(--mr);line-height:1.2;margin:0}.nv-b span{font-size:10px;color:var(--sf);font-weight:500}
+		.nv-l{display:flex;align-items:center;gap:6px}.nv-l a{padding:10px 16px;font-size:13px;font-weight:600;color:var(--mr);text-transform:uppercase;letter-spacing:.5px;border-radius:8px;white-space:nowrap}.nv-l a:hover,.nv-l a.ac{color:var(--sf);background:rgba(255,107,0,.08)}.nv-l a.ac{position:relative}.nv-l a.ac::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:18px;height:3px;background:var(--sf);border-radius:2px}
+		.nv-d{background:var(--gs)!important;color:#fff!important;padding:10px 22px!important;border-radius:50px!important;font-weight:700!important;box-shadow:0 4px 15px rgba(255,107,0,.3)}.nv-d:hover{transform:translateY(-2px);color:#fff!important;background:var(--gs)!important}
+		.nv-t{display:none;flex-direction:column;gap:5px;background:0 0;border:0;cursor:pointer;padding:8px}.nv-t span{width:24px;height:2.5px;background:var(--mr);border-radius:3px;transition:all .3s}.nv-t.on span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.nv-t.on span:nth-child(2){opacity:0}.nv-t.on span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
-		.page-header { padding: 140px 0 80px; background: var(--gradient-maroon); text-align: center; position: relative; overflow: hidden; }
-		.page-header::before { content: ''; position: absolute; inset: 0; background: url('public/photos/mandir-main.png') center/cover; z-index: 0; opacity: 0.15; }
-		.page-header * { position: relative; z-index: 1; }
-		.page-header h2 { font-size: clamp(28px,5vw,48px); color: #fff; font-weight: 900; margin-bottom: 8px; }
-		.page-header .hindi { font-family: 'Tiro Devanagari Hindi', serif; color: var(--gold-light); font-size: 20px; margin-bottom: 16px; }
-		.page-header .breadcrumb { font-size: 14px; color: rgba(255,255,255,0.7); }
-		.page-header .breadcrumb a { color: var(--gold-light); }
+		/* PAGE HEADER */
+		.ph{padding:140px 0 80px;background:var(--gm);text-align:center;position:relative;overflow:hidden}
+		.ph::before{content:'';position:absolute;inset:0;background:url('public/photos/mandir-main.png') center/cover;z-index:0;opacity:.15}
+		.ph *{position:relative;z-index:1}
+		.ph h2{font-size:clamp(28px,5vw,48px);color:#fff;font-weight:900;margin-bottom:8px}
+		.ph .hi{font-family:'Tiro Devanagari Hindi',serif;color:var(--gl);font-size:20px;margin-bottom:16px}
+		.ph .br{font-size:14px;color:rgba(255,255,255,.7)}.ph .br a{color:var(--gl)}
 
-		.contact-section { padding: 80px 0; }
-		.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-		.contact-info-cards { display: flex; flex-direction: column; gap: 20px; }
-		.contact-card { display: flex; gap: 16px; align-items: flex-start; padding: 24px; background: #fff; border-radius: 16px; border: 1px solid var(--border-light); box-shadow: var(--shadow-soft); transition: all 0.3s ease; }
-		.contact-card:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(107,15,26,0.12); }
-		.contact-card .icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: rgba(255,107,0,0.1); color: var(--saffron); font-size: 22px; flex-shrink: 0; }
-		.contact-card h4 { font-size: 16px; font-weight: 700; color: var(--maroon); margin: 0 0 4px; }
-		.contact-card p { font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+		/* CONTENT */
+		.sec{padding:80px 0}
+		.cg{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+		.ci-list{display:flex;flex-direction:column;gap:20px}
+		.ci-card{display:flex;gap:16px;align-items:flex-start;padding:24px;background:#fff;border-radius:16px;border:1px solid var(--bl);box-shadow:var(--sh);transition:all .3s}
+		.ci-card:hover{transform:translateX(4px);box-shadow:0 8px 30px rgba(107,15,26,.12)}
+		.ci-card .ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(255,107,0,.1);color:var(--sf);font-size:22px;flex-shrink:0}
+		.ci-card h4{font-size:16px;font-weight:700;color:var(--mr);margin:0 0 4px}
+		.ci-card p{font-size:14px;color:var(--tm);margin:0;line-height:1.6}
+		
+		.c-map{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(107,15,26,.15);height:100%;min-height:400px}
+		.c-map iframe{width:100%;height:100%;border:0}
 
-		.contact-map { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(107,15,26,0.15); height: 100%; min-height: 400px; }
-		.contact-map iframe { width: 100%; height: 100%; border: none; }
+		/* FORM */
+		.msg-sec{padding:60px 0 80px}
+		.msg-box{max-width:700px;margin:0 auto;background:#fff;padding:40px;border-radius:24px;border:1px solid var(--bl);box-shadow:var(--sh)}
+		.msg-box h3{font-size:24px;font-weight:800;color:var(--mr);text-align:center;margin-bottom:8px}
+		.msg-box .sb{text-align:center;color:var(--sf);font-size:14px;margin-bottom:28px}
+		.fg{margin-bottom:20px}
+		.fg label{display:block;font-size:13px;font-weight:600;color:var(--mr);margin-bottom:6px}
+		.fg input,.fg textarea{width:100%;padding:14px 18px;border:1px solid var(--bl);border-radius:12px;font-size:14px;font-family:'Poppins',sans-serif;background:var(--cr);color:#2d1810;transition:all .3s;outline:none}
+		.fg input:focus,.fg textarea:focus{border-color:var(--sf);box-shadow:0 0 0 3px rgba(255,107,0,.1)}
+		.fg textarea{height:120px;resize:vertical}
+		.fr{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+		.sb-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 40px;background:var(--gs);color:#fff;font-weight:700;font-size:15px;border-radius:50px;border:0;cursor:pointer;width:100%;justify-content:center;box-shadow:0 4px 20px rgba(255,107,0,.3);transition:all .3s}
+		.sb-btn:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(255,107,0,.4)}
 
-		.message-section { padding: 60px 0 80px; }
-		.message-box { max-width: 700px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 24px; border: 1px solid var(--border-light); box-shadow: var(--shadow-soft); }
-		.message-box h3 { font-size: 24px; font-weight: 800; color: var(--maroon); text-align: center; margin-bottom: 8px; }
-		.message-box .sub { text-align: center; color: var(--saffron); font-size: 14px; margin-bottom: 28px; font-family: 'Tiro Devanagari Hindi', serif; }
-		.form-group { margin-bottom: 20px; }
-		.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--maroon); margin-bottom: 6px; }
-		.form-group input, .form-group textarea {
-			width: 100%; padding: 14px 18px; border: 1px solid var(--border-light); border-radius: 12px;
-			font-size: 14px; font-family: 'Poppins', sans-serif; background: var(--cream); color: #2d1810;
-			transition: all 0.3s ease; outline: none;
-		}
-		.form-group input:focus, .form-group textarea:focus { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(255,107,0,0.1); }
-		.form-group textarea { height: 120px; resize: vertical; }
-		.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-		.submit-btn {
-			display: inline-flex; align-items: center; gap: 8px; padding: 14px 40px;
-			background: var(--gradient-saffron); color: #fff; font-weight: 700; font-size: 15px;
-			border-radius: 50px; border: none; cursor: pointer; width: 100%; justify-content: center;
-			box-shadow: 0 4px 20px rgba(255,107,0,0.3); transition: all 0.3s ease;
-		}
-		.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(255,107,0,0.4); }
+		/* FOOTER */
+		.ft{background:var(--md);padding:40px 0 20px}.ft-i{text-align:center}
+		.ft-i img{width:48px;height:48px;border-radius:50%;border:2px solid var(--gd);margin:0 auto 12px}
+		.ft-i h3{color:#fff;font-size:18px;margin-bottom:4px}.ft-i .s{color:var(--sl);font-size:13px;margin-bottom:16px}
+		.ft-i .lk{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+		.ft-i .lk a{color:rgba(255,255,255,.6);font-size:14px}.ft-i .lk a:hover{color:var(--sl)}
+		.ft-i .cp{color:rgba(255,255,255,.3);font-size:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}.ft-i .cp span{color:var(--sl)}
 
-		.footer { background: var(--maroon-dark); padding: 40px 0 20px; }
-		.footer-inner { text-align: center; }
-		.footer-inner img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold); margin: 0 auto 12px; }
-		.footer-inner h3 { color: #fff; font-size: 18px; margin-bottom: 4px; }
-		.footer-inner .sub { color: var(--saffron-light); font-size: 13px; margin-bottom: 16px; }
-		.footer-inner .links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-		.footer-inner .links a { color: rgba(255,255,255,0.6); font-size: 14px; }
-		.footer-inner .links a:hover { color: var(--saffron-light); }
-		.footer-inner .copy { color: rgba(255,255,255,0.3); font-size: 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
-		.footer-inner .copy span { color: var(--saffron-light); }
-
-		@media (max-width: 992px) {
-			.nav-links { display: none; } .nav-toggle { display: flex; }
-			.nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,248,240,0.98); backdrop-filter: blur(20px); padding: 16px 20px; border-bottom: 2px solid var(--border-light); gap: 4px; }
-			.contact-grid { grid-template-columns: 1fr; }
-		}
-		@media (max-width: 480px) {
-			.container { padding: 0 16px; } .page-header { padding: 120px 0 60px; }
-			.message-box { padding: 24px; } .form-row { grid-template-columns: 1fr; }
-			.nav-brand img { width: 40px; height: 40px; } .nav-brand-text h1 { font-size: 14px; }
-		}
+		@media(max-width:992px){.nv-l{display:none}.nv-t{display:flex}.nv-l.op{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(255,248,240,.98);backdrop-filter:blur(20px);padding:14px 18px;border-bottom:2px solid var(--bl);gap:2px}.cg{grid-template-columns:1fr}}
+		@media(max-width:480px){.ctn{padding:0 16px}.ph{padding:120px 0 60px}.msg-box{padding:24px}.fr{grid-template-columns:1fr}.nv-b img{width:36px;height:36px}.nv-b h1{font-size:13px}}
 	</style>
 </head>
 <body>
 
-<nav class="navbar" id="navbar">
-	<div class="container">
-		<div class="nav-inner">
-			<a href="index.html" class="nav-brand">
-				<img src="public/photos/bal-krishna-logo.png" loading="lazy" width="48" height="48" alt="बालकेश्वर धाम">
-				<div class="nav-brand-text"><h1>बालकेश्वर धाम</h1><span>मंदिर खोंखरा, सोजत</span></div>
-			</a>
-			<button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-			<div class="nav-links" id="navLinks">
-				<a href="index.html">मुख्य पृष्ठ</a>
-				<a href="about.html">हमारे बारे में</a>
-				<a href="contact.html" class="active">संपर्क करें</a>
-				<a href="donation.html" class="nav-donate-btn">दान करें 🙏</a>
-			</div>
-		</div>
-	</div>
-</nav>
+<nav class="nv" id="nb"><div class="ctn"><div class="nv-i">
+	<a href="index.html" class="nv-b"><img src="public/photos/bal-krishna-logo.png" alt="Balkeshwar Dham" width="44" height="44"><div><h1>Balkeshwar Dham</h1><span>Mandir Khokhara, Sojat</span></div></a>
+	<button class="nv-t" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+	<div class="nv-l" id="nl"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html" class="ac">Contact</a><a href="donation.html" class="nv-d">Donate 🙏</a></div>
+</div></div></nav>
 
-<section class="page-header">
-	<h2>संपर्क करें</h2>
-	<div class="hindi">Contact Us</div>
-	<div class="breadcrumb"><a href="index.html">मुख्य पृष्ठ</a> / संपर्क करें</div>
+<section class="ph">
+	<h2>Contact Us</h2>
+	<div class="hi">संपर्क करें</div>
+	<div class="br"><a href="index.html">Home</a> / Contact</div>
 </section>
 
-<section class="contact-section">
-	<div class="container">
-		<div class="contact-grid">
-			<div class="contact-info-cards">
-				<div class="contact-card">
-					<div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-					<div>
-						<h4>पता / Address</h4>
-						<p>बालकेश्वर धाम मंदिर, ग्राम खोंखरा<br>306306, सोजत, जिला पाली, राजस्थान, भारत</p>
-					</div>
-				</div>
-				<div class="contact-card">
-					<div class="icon"><i class="fa-solid fa-clock"></i></div>
-					<div>
-						<h4>दर्शन का समय / Visiting Hours</h4>
-						<p>प्रतिदिन सुबह 5:00 बजे से रात 9:30 बजे तक<br>Daily: 5:00 AM — 9:30 PM</p>
-					</div>
-				</div>
-				<div class="contact-card">
-					<div class="icon"><i class="fa-solid fa-train"></i></div>
-					<div>
-						<h4>कैसे पहुँचें / How to Reach</h4>
-						<p>निकटतम रेलवे स्टेशन: सोजत रोड (लगभग 15 किमी)<br>पाली-सोजत मार्ग पर राजस्थान रोडवेज बसें उपलब्ध</p>
-					</div>
-				</div>
-				<div class="contact-card">
-					<div class="icon"><i class="fa-solid fa-hands-praying"></i></div>
-					<div>
-						<h4>विशेष उत्सव / Special Festivals</h4>
-						<p>जन्माष्टमी, होली, गोवर्धन पूजा, अन्नकूट<br>Janmashtami, Holi, Govardhan Puja, Annakut</p>
-					</div>
-				</div>
+<section class="sec">
+	<div class="ctn">
+		<div class="cg">
+			<div class="ci-list">
+				<div class="ci-card"><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><h4>Address / पता</h4><p>Balkeshwar Dham Mandir, Village Khokhara<br>306306, Sojat, Pali District, Rajasthan, India<br>बालकेश्वर धाम मंदिर, ग्राम खोंखरा, सोजत, पाली</p></div></div>
+				<div class="ci-card"><div class="ic"><i class="fa-solid fa-clock"></i></div><div><h4>Visiting Hours / दर्शन का समय</h4><p>Daily: 5:00 AM — 9:30 PM<br>प्रतिदिन सुबह 5:00 बजे से रात 9:30 बजे तक</p></div></div>
+				<div class="ci-card"><div class="ic"><i class="fa-solid fa-train"></i></div><div><h4>How to Reach / कैसे पहुँचें</h4><p>Nearest Station: Sojat Road (approx 15 km)<br>RSRTC buses available on Pali-Sojat route<br>निकटतम रेलवे स्टेशन: सोजत रोड</p></div></div>
+				<div class="ci-card"><div class="ic"><i class="fa-solid fa-hands-praying"></i></div><div><h4>Special Festivals / विशेष उत्सव</h4><p>Janmashtami, Holi, Govardhan Puja, Annakut<br>जन्माष्टमी, होली, गोवर्धन पूजा, अन्नकूट</p></div></div>
 			</div>
-			<div class="contact-map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600!2d73.6!3d25.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzAwLjAiTiA3M8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" title="बालकेश्वर धाम मानचित्र"></iframe>
+			<div class="c-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600!2d73.6!3d25.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU0JzAwLjAiTiA3M8KwMzYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" title="Map"></iframe>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="message-section">
-	<div class="container">
-		<div class="message-box">
-			<h3>🙏 संदेश भेजें</h3>
-			<div class="sub">Send Us a Message</div>
+<section class="msg-sec">
+	<div class="ctn">
+		<div class="msg-box">
+			<h3>🙏 Send Us a Message</h3>
+			<div class="sb">संदेश भेजें</div>
 			<form>
-				<div class="form-row">
-					<div class="form-group">
-						<label>आपका नाम / Your Name</label>
-						<input type="text" placeholder="नाम लिखें...">
-					</div>
-					<div class="form-group">
-						<label>ईमेल / Email</label>
-						<input type="email" placeholder="ईमेल लिखें...">
-					</div>
+				<div class="fr">
+					<div class="fg"><label>Your Name / आपका नाम</label><input type="text" placeholder="Enter name..."></div>
+					<div class="fg"><label>Email / ईमेल</label><input type="email" placeholder="Enter email..."></div>
 				</div>
-				<div class="form-group">
-					<label>विषय / Subject</label>
-					<input type="text" placeholder="विषय लिखें...">
-				</div>
-				<div class="form-group">
-					<label>आपका संदेश / Your Message</label>
-					<textarea placeholder="यहाँ अपना संदेश लिखें..."></textarea>
-				</div>
-				<button type="submit" class="submit-btn">
-					<i class="fa-solid fa-paper-plane"></i> संदेश भेजें / Send Message
-				</button>
+				<div class="fg"><label>Subject / विषय</label><input type="text" placeholder="Enter subject..."></div>
+				<div class="fg"><label>Your Message / आपका संदेश</label><textarea placeholder="Write your message here..."></textarea></div>
+				<button type="submit" class="sb-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
 			</form>
 		</div>
 	</div>
 </section>
 
-<footer class="footer">
-	<div class="container">
-		<div class="footer-inner">
-			<img src="public/photos/bal-krishna-logo.png" loading="lazy" width="48" height="48" alt="बालकेश्वर धाम">
-			<h3>बालकेश्वर धाम मंदिर</h3>
-			<div class="sub">खोंखरा, 306306, सोजत, पाली, राजस्थान</div>
-			<div class="links">
-				<a href="index.html">मुख्य पृष्ठ</a>
-				<a href="about.html">हमारे बारे में</a>
-				<a href="donation.html">दान करें</a>
-				<a href="contact.html">संपर्क करें</a>
-			</div>
-			<div class="copy">© 2025 <span>बालकेश्वर धाम मंदिर खोंखरा</span> — ॥ जय श्री कृष्ण ॥</div>
-		</div>
-	</div>
-</footer>
+<footer class="ft"><div class="ctn"><div class="ft-i">
+	<img src="public/photos/bal-krishna-logo.png" alt="Balkeshwar Dham" width="48" height="48" loading="lazy">
+	<h3>Balkeshwar Dham Mandir</h3><div class="s">Khokhara, 306306, Sojat, Pali, Rajasthan</div>
+	<div class="lk"><a href="index.html">Home</a><a href="about.html">About</a><a href="donation.html">Donate</a><a href="contact.html">Contact</a></div>
+	<div class="cp">© 2025 <span>Balkeshwar Dham Mandir</span> — ॥ Jai Shri Krishna ॥</div>
+</div></div></footer>
 
 <script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => { navToggle.classList.toggle('active'); navLinks.classList.toggle('open'); });
-navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { navToggle.classList.remove('active'); navLinks.classList.remove('open'); }));
+var nb=document.getElementById('nb');window.addEventListener('scroll',function(){nb.classList.toggle('sc',window.scrollY>50)});
+var nt=document.getElementById('nt'),nl=document.getElementById('nl');
+nt.addEventListener('click',function(){nt.classList.toggle('on');nl.classList.toggle('op')});
+nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nt.classList.remove('on');nl.classList.remove('op')})});
+document.querySelectorAll('img[loading="lazy"]').forEach(function(i){if(i.complete)i.classList.add('ld');else i.addEventListener('load',function(){i.classList.add('ld')})});
 </script>
 </body>
 </html>
-
-

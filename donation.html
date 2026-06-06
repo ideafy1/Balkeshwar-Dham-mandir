@@ -4,210 +4,148 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>दान करें | बालकेश्वर धाम मंदिर खोंखरा</title>
-	<meta name="description" content="बालकेश्वर धाम मंदिर खोंखरा के निर्माण और सेवा कार्यों में अपना सहयोग दें। Donate to Balkeshwar Dham Mandir.">
+	<title>Donate — Balkeshwar Dham Mandir Khokhara</title>
+	<meta name="description" content="Donate to Balkeshwar Dham Mandir Khokhara. Support temple construction, daily worship, and community service.">
 	<link rel="icon" type="image/png" href="public/photos/bal-krishna-logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
-	<link href="fonts/css/fontawesome.min.css" rel="stylesheet">
-	<link href="fonts/css/brands.min.css" rel="stylesheet">
-	<link href="fonts/css/solid.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+	<link href="fonts/css/fontawesome.min.css" rel="stylesheet"><link href="fonts/css/solid.min.css" rel="stylesheet">
 	<style>
-		*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-		html { scroll-behavior: smooth; overflow-x: hidden; }
-		body { font-family: 'Poppins', sans-serif; line-height: 1.7; color: #2d1810; background: #fffaf5; overflow-x: hidden; }
-		img { max-width: 100%; height: auto; display: block; }
-		a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-		ul { list-style: none; padding: 0; margin: 0; }
-		:root {
-			--saffron: #FF6B00; --saffron-light: #FF8C38; --gold: #D4A017; --gold-light: #F5D77A;
-			--maroon: #6B0F1A; --maroon-dark: #3D0A10; --cream: #FFF8F0; --text-muted: #7A6455;
-			--border-light: rgba(212,160,23,0.2); --shadow-soft: 0 4px 20px rgba(107,15,26,0.08);
-			--gradient-saffron: linear-gradient(135deg, #FF6B00 0%, #FF8C38 100%);
-			--gradient-maroon: linear-gradient(135deg, #6B0F1A 0%, #8B1A2B 100%);
-		}
-		.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+		*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{font-family:'Poppins',sans-serif;line-height:1.7;color:#2d1810;background:#fffaf5;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s ease}ul{list-style:none;padding:0;margin:0}
+		:root{--sf:#FF6B00;--sl:#FF8C38;--gd:#D4A017;--gl:#F5D77A;--mr:#6B0F1A;--md:#3D0A10;--cr:#FFF8F0;--tm:#7A6455;--bl:rgba(212,160,23,.2);--sh:0 4px 20px rgba(107,15,26,.08);--gs:linear-gradient(135deg,#FF6B00,#FF8C38);--gm:linear-gradient(135deg,#6B0F1A,#8B1A2B)}
+		.ctn{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+		img[loading="lazy"]{opacity:0;transition:opacity .4s}img[loading="lazy"].ld{opacity:1}
 
-		/* Nav */
-		.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,248,240,0.95); backdrop-filter: blur(20px); border-bottom: 2px solid var(--border-light); padding: 0; }
-		.navbar.scrolled { box-shadow: 0 2px 30px rgba(107,15,26,0.12); }
-		.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
-		.nav-brand { display: flex; align-items: center; gap: 12px; }
-		.nav-brand img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
-		.nav-brand-text h1 { font-size: 16px; font-weight: 800; color: var(--maroon); line-height: 1.2; margin: 0; }
-		.nav-brand-text span { font-size: 11px; color: var(--saffron); font-weight: 500; }
-		.nav-links { display: flex; align-items: center; gap: 8px; }
-		.nav-links a { padding: 10px 18px; font-size: 13px; font-weight: 600; color: var(--maroon); text-transform: uppercase; letter-spacing: 0.5px; border-radius: 8px; }
-		.nav-links a:hover, .nav-links a.active { color: var(--saffron); background: rgba(255,107,0,0.08); }
-		.nav-links a.active { position: relative; }
-		.nav-links a.active::after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 20px; height: 3px; background: var(--saffron); border-radius: 2px; }
-		.nav-donate-btn { background: var(--gradient-saffron) !important; color: #fff !important; padding: 10px 24px !important; border-radius: 50px !important; font-weight: 700 !important; }
-		.nav-donate-btn:hover { transform: translateY(-2px); color: #fff !important; }
-		.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
-		.nav-toggle span { width: 26px; height: 3px; background: var(--maroon); border-radius: 3px; transition: all 0.3s ease; }
-		.nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,6px); }
-		.nav-toggle.active span:nth-child(2) { opacity: 0; }
-		.nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-6px); }
+		/* NAV */
+		.nv{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,248,240,.96);backdrop-filter:blur(20px);border-bottom:2px solid var(--bl);transition:all .3s}.nv.sc{box-shadow:0 2px 30px rgba(107,15,26,.12)}
+		.nv-i{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+		.nv-b{display:flex;align-items:center;gap:10px}.nv-b img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gd);object-fit:cover}.nv-b h1{font-size:15px;font-weight:800;color:var(--mr);line-height:1.2;margin:0}.nv-b span{font-size:10px;color:var(--sf);font-weight:500}
+		.nv-l{display:flex;align-items:center;gap:6px}.nv-l a{padding:10px 16px;font-size:13px;font-weight:600;color:var(--mr);text-transform:uppercase;letter-spacing:.5px;border-radius:8px;white-space:nowrap}.nv-l a:hover,.nv-l a.ac{color:var(--sf);background:rgba(255,107,0,.08)}.nv-l a.ac{position:relative}.nv-l a.ac::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:18px;height:3px;background:var(--sf);border-radius:2px}
+		.nv-d{background:var(--gs)!important;color:#fff!important;padding:10px 22px!important;border-radius:50px!important;font-weight:700!important;box-shadow:0 4px 15px rgba(255,107,0,.3)}.nv-d:hover{transform:translateY(-2px);color:#fff!important;background:var(--gs)!important}
+		.nv-t{display:none;flex-direction:column;gap:5px;background:0 0;border:0;cursor:pointer;padding:8px}.nv-t span{width:24px;height:2.5px;background:var(--mr);border-radius:3px;transition:all .3s}.nv-t.on span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.nv-t.on span:nth-child(2){opacity:0}.nv-t.on span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
-		.page-header { padding: 140px 0 80px; background: var(--gradient-maroon); text-align: center; position: relative; overflow: hidden; }
-		.page-header::before { content: ''; position: absolute; inset: 0; background: url('public/photos/mandir-entrance.png') center/cover; z-index: 0; opacity: 0.15; }
-		.page-header * { position: relative; z-index: 1; }
-		.page-header h2 { font-size: clamp(28px,5vw,48px); color: #fff; font-weight: 900; margin-bottom: 8px; }
-		.page-header .hindi { font-family: 'Tiro Devanagari Hindi', serif; color: var(--gold-light); font-size: 20px; margin-bottom: 16px; }
-		.page-header .breadcrumb { font-size: 14px; color: rgba(255,255,255,0.7); }
-		.page-header .breadcrumb a { color: var(--gold-light); }
+		/* HERO BANNER */
+		.ph{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center}
+		.ph-bg{position:absolute;inset:0;z-index:0}
+		.ph-bg img{width:100%;height:100%;object-fit:cover}
+		.ph-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(61,10,16,.85),rgba(107,15,26,.6) 50%,rgba(0,0,0,.3))}
+		.ph-c{position:relative;z-index:1;text-align:center;padding:120px 20px 60px}
+		.ph-c h2{font-size:clamp(28px,5vw,48px);color:#fff;font-weight:900;margin-bottom:8px;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+		.ph-c .hi{font-family:'Tiro Devanagari Hindi',serif;color:var(--gl);font-size:clamp(16px,3vw,22px);margin-bottom:12px}
+		.ph-c p{color:rgba(255,255,255,.75);font-size:14px;max-width:500px;margin:0 auto}
 
-		.donate-section { padding: 80px 0; }
-		.donate-intro { text-align: center; max-width: 700px; margin: 0 auto 56px; }
-		.donate-intro h3 { font-size: 28px; font-weight: 800; color: var(--maroon); margin-bottom: 16px; }
-		.donate-intro p { color: var(--text-muted); font-size: 15px; }
+		/* CONTENT */
+		.sec{padding:70px 0}
+		.d-intro{text-align:center;max-width:700px;margin:0 auto 50px}
+		.d-intro h3{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--mr);margin-bottom:14px}
+		.d-intro p{color:var(--tm);font-size:14px;line-height:1.8}
 
-		.donate-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
-		.donate-card {
-			background: #fff; border-radius: 20px; padding: 36px; text-align: center;
-			border: 1px solid var(--border-light); box-shadow: var(--shadow-soft); transition: all 0.4s ease;
-			position: relative; overflow: hidden;
-		}
-		.donate-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-saffron); }
-		.donate-card:hover { transform: translateY(-8px); box-shadow: 0 8px 40px rgba(107,15,26,0.15); }
-		.donate-card .emoji { font-size: 48px; margin-bottom: 16px; }
-		.donate-card h4 { font-size: 20px; font-weight: 700; color: var(--maroon); margin-bottom: 4px; }
-		.donate-card .english { font-size: 13px; color: var(--saffron); margin-bottom: 12px; }
-		.donate-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+		.d-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
+		.d-card{background:#fff;border-radius:20px;padding:36px;text-align:center;border:1px solid var(--bl);box-shadow:var(--sh);transition:all .4s;position:relative;overflow:hidden}
+		.d-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gs)}
+		.d-card:hover{transform:translateY(-8px);box-shadow:0 8px 40px rgba(107,15,26,.15)}
+		.d-card .emoji{font-size:48px;margin-bottom:16px}
+		.d-card h4{font-size:20px;font-weight:700;color:var(--mr);margin-bottom:4px}
+		.d-card .en{font-size:13px;color:var(--sf);margin-bottom:12px;font-weight:600}
+		.d-card p{font-size:13px;color:var(--tm);line-height:1.7}
 
-		.cta-section { padding: 80px 0; background: var(--gradient-maroon); text-align: center; }
-		.cta-section h3 { font-size: clamp(24px,4vw,36px); color: #fff; font-weight: 800; margin-bottom: 16px; }
-		.cta-section p { color: rgba(255,255,255,0.7); font-size: 15px; max-width: 600px; margin: 0 auto 32px; }
-		.cta-btn {
-			display: inline-flex; align-items: center; gap: 10px; padding: 16px 48px;
-			background: var(--gradient-saffron); color: #fff; font-weight: 700; font-size: 16px;
-			border-radius: 50px; border: none; cursor: pointer;
-			box-shadow: 0 4px 25px rgba(255,107,0,0.4); transition: all 0.3s ease;
-		}
-		.cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(255,107,0,0.5); color: #fff; }
+		/* CTA */
+		.cta{padding:80px 0;background:var(--gm);text-align:center;position:relative;overflow:hidden}
+		.cta::before{content:'';position:absolute;inset:0;background:url('public/photos/donation-banner.png') center/cover;opacity:.12;z-index:0}
+		.cta *{position:relative;z-index:1}
+		.cta h3{font-size:clamp(22px,4vw,34px);color:#fff;font-weight:800;margin-bottom:14px}
+		.cta p{color:rgba(255,255,255,.7);font-size:14px;max-width:550px;margin:0 auto 28px}
+		.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 48px;background:var(--gs);color:#fff;font-weight:700;font-size:16px;border-radius:50px;border:0;cursor:pointer;box-shadow:0 4px 25px rgba(255,107,0,.4);transition:all .3s}
+		.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 35px rgba(255,107,0,.5);color:#fff}
 
-		.footer { background: var(--maroon-dark); padding: 40px 0 20px; }
-		.footer-inner { text-align: center; }
-		.footer-inner img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold); margin: 0 auto 12px; }
-		.footer-inner h3 { color: #fff; font-size: 18px; margin-bottom: 4px; }
-		.footer-inner .sub { color: var(--saffron-light); font-size: 13px; margin-bottom: 16px; }
-		.footer-inner .links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
-		.footer-inner .links a { color: rgba(255,255,255,0.6); font-size: 14px; }
-		.footer-inner .links a:hover { color: var(--saffron-light); }
-		.footer-inner .copy { color: rgba(255,255,255,0.3); font-size: 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
-		.footer-inner .copy span { color: var(--saffron-light); }
+		/* FOOTER */
+		.ft{background:var(--md);padding:40px 0 20px}.ft-i{text-align:center}
+		.ft-i img{width:48px;height:48px;border-radius:50%;border:2px solid var(--gd);margin:0 auto 12px}
+		.ft-i h3{color:#fff;font-size:18px;margin-bottom:4px}.ft-i .s{color:var(--sl);font-size:13px;margin-bottom:16px}
+		.ft-i .lk{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+		.ft-i .lk a{color:rgba(255,255,255,.6);font-size:14px}.ft-i .lk a:hover{color:var(--sl)}
+		.ft-i .cp{color:rgba(255,255,255,.3);font-size:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}.ft-i .cp span{color:var(--sl)}
 
-		@media (max-width: 992px) {
-			.nav-links { display: none; } .nav-toggle { display: flex; }
-			.nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,248,240,0.98); backdrop-filter: blur(20px); padding: 16px 20px; border-bottom: 2px solid var(--border-light); gap: 4px; }
-			.donate-cards { grid-template-columns: 1fr; }
-		}
-		@media (max-width: 480px) {
-			.container { padding: 0 16px; } .page-header { padding: 120px 0 60px; }
-			.donate-card { padding: 28px 20px; }
-			.nav-brand img { width: 40px; height: 40px; } .nav-brand-text h1 { font-size: 14px; }
-		}
+		@media(max-width:992px){.nv-l{display:none}.nv-t{display:flex}.nv-l.op{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(255,248,240,.98);backdrop-filter:blur(20px);padding:14px 18px;border-bottom:2px solid var(--bl);gap:2px}.d-cards{grid-template-columns:1fr}}
+		@media(max-width:480px){.ctn{padding:0 14px}.ph{min-height:340px}.ph-c{padding:100px 16px 40px}.d-card{padding:28px 20px}.nv-b img{width:36px;height:36px}.nv-b h1{font-size:13px}}
 	</style>
 </head>
 <body>
 
-<nav class="navbar" id="navbar">
-	<div class="container">
-		<div class="nav-inner">
-			<a href="index.html" class="nav-brand">
-				<img src="public/photos/bal-krishna-logo.png" loading="lazy" width="48" height="48" alt="बालकेश्वर धाम">
-				<div class="nav-brand-text"><h1>बालकेश्वर धाम</h1><span>मंदिर खोंखरा, सोजत</span></div>
-			</a>
-			<button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-			<div class="nav-links" id="navLinks">
-				<a href="index.html">मुख्य पृष्ठ</a>
-				<a href="about.html">हमारे बारे में</a>
-				<a href="contact.html">संपर्क करें</a>
-				<a href="donation.html" class="nav-donate-btn active">दान करें 🙏</a>
-			</div>
-		</div>
-	</div>
-</nav>
+<nav class="nv" id="nb"><div class="ctn"><div class="nv-i">
+	<a href="index.html" class="nv-b"><img src="public/photos/bal-krishna-logo.png" alt="Balkeshwar Dham" width="44" height="44"><div><h1>Balkeshwar Dham</h1><span>Mandir Khokhara, Sojat</span></div></a>
+	<button class="nv-t" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+	<div class="nv-l" id="nl"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="donation.html" class="nv-d ac">Donate 🙏</a></div>
+</div></div></nav>
 
-<section class="page-header">
-	<h2>🙏 दान करें</h2>
-	<div class="hindi">Donate to Balkeshwar Dham</div>
-	<div class="breadcrumb"><a href="index.html">मुख्य पृष्ठ</a> / दान करें</div>
+<!-- HERO WITH AI IMAGE -->
+<section class="ph">
+	<div class="ph-bg"><img src="public/photos/donation-banner.png" alt="Bal Gopal Divine" width="1200" height="675" fetchpriority="high"></div>
+	<div class="ph-c">
+		<h2>🙏 Donate to Balkeshwar Dham</h2>
+		<div class="hi">मंदिर सेवा में अपना योगदान दें</div>
+		<p>Every contribution makes a difference in preserving this sacred heritage.</p>
+	</div>
 </section>
 
-<section class="donate-section">
-	<div class="container">
-		<div class="donate-intro">
-			<h3>मंदिर सेवा में अपना योगदान दें</h3>
+<section class="sec">
+	<div class="ctn">
+		<div class="d-intro">
+			<h3>Support Temple & Seva Activities</h3>
 			<p>बालकेश्वर धाम मंदिर के निर्माण, जीर्णोद्धार, नित्य पूजा, भोग, और समाज सेवा कार्यों में आपका हर छोटा-बड़ा सहयोग अमूल्य है।</p>
-			<p style="margin-top: 8px;">Every contribution, big or small, helps sustain the temple's daily worship, construction, and community service activities.</p>
+			<p style="margin-top:8px;">Every contribution, big or small, helps sustain the temple's daily worship, construction, and community service activities.</p>
 		</div>
-
-		<div class="donate-cards">
-			<div class="donate-card">
+		<div class="d-cards">
+			<div class="d-card">
 				<div class="emoji">🏛️</div>
-				<h4>मंदिर निर्माण दान</h4>
-				<div class="english">Temple Construction</div>
-				<p>मंदिर भवन के निर्माण, विस्तार, और सौंदर्यीकरण में अपना योगदान दें। Help build and beautify the sacred temple of Bal Gopal.</p>
+				<h4>Temple Construction</h4>
+				<div class="en">मंदिर निर्माण दान</div>
+				<p>Help build and beautify the sacred temple of Bal Gopal. मंदिर भवन के निर्माण और विस्तार में अपना योगदान दें।</p>
 			</div>
-			<div class="donate-card">
+			<div class="d-card">
 				<div class="emoji">🍲</div>
-				<h4>अन्नदान / भंडारा सेवा</h4>
-				<div class="english">Bhandara (Food Service)</div>
-				<p>भक्तों एवं ज़रूरतमंदों को भोजन कराने हेतु अन्नदान करें। Donate for free food distribution to devotees and needy people.</p>
+				<h4>Bhandara — Food Seva</h4>
+				<div class="en">अन्नदान / भंडारा सेवा</div>
+				<p>Donate for free food distribution to devotees. भक्तों एवं ज़रूरतमंदों को भोजन कराने हेतु अन्नदान करें।</p>
 			</div>
-			<div class="donate-card">
+			<div class="d-card">
 				<div class="emoji">🪔</div>
-				<h4>दीप दान / ज्योति सेवा</h4>
-				<div class="english">Lamp Donation (Jyoti Seva)</div>
-				<p>मंदिर में नित्य दीपक प्रज्ज्वलन हेतु दीप दान करें। Donate for daily lamp lighting in the temple premises.</p>
+				<h4>Lamp Donation</h4>
+				<div class="en">दीप दान / ज्योति सेवा</div>
+				<p>Sponsor daily lamp lighting in the temple. मंदिर में नित्य दीपक प्रज्ज्वलन हेतु दान करें।</p>
 			</div>
-			<div class="donate-card">
+			<div class="d-card">
 				<div class="emoji">🌸</div>
-				<h4>पुष्प एवं श्रृंगार सेवा</h4>
-				<div class="english">Flower & Decoration</div>
-				<p>बाल गोपाल के दैनिक श्रृंगार, पुष्प, और वस्त्र सेवा हेतु दान दें। Sponsor the daily adornment and flower decoration of Bal Gopal.</p>
+				<h4>Flower & Decoration</h4>
+				<div class="en">पुष्प एवं श्रृंगार सेवा</div>
+				<p>Sponsor the daily adornment of Bal Gopal. बाल गोपाल के श्रृंगार, पुष्प, और वस्त्र सेवा हेतु दान दें।</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="cta-section">
-	<div class="container">
-		<h3>🙏 आपका दान, बाल गोपाल की सेवा</h3>
+<section class="cta">
+	<div class="ctn">
+		<h3>आपका दान, बाल गोपाल की सेवा</h3>
 		<p>Your donation directly supports the divine service of Bal Gopal. Every rupee counts towards preserving this sacred heritage.</p>
-		<a href="contact.html" class="cta-btn">
-			<i class="fa-solid fa-hand-holding-heart"></i> संपर्क करें — दान हेतु / Contact for Donation
-		</a>
+		<a href="contact.html" class="cta-btn"><i class="fa-solid fa-hand-holding-heart"></i> Contact for Donation</a>
 	</div>
 </section>
 
-<footer class="footer">
-	<div class="container">
-		<div class="footer-inner">
-			<img src="public/photos/bal-krishna-logo.png" loading="lazy" width="48" height="48" alt="बालकेश्वर धाम">
-			<h3>बालकेश्वर धाम मंदिर</h3>
-			<div class="sub">खोंखरा, 306306, सोजत, पाली, राजस्थान</div>
-			<div class="links">
-				<a href="index.html">मुख्य पृष्ठ</a>
-				<a href="about.html">हमारे बारे में</a>
-				<a href="donation.html">दान करें</a>
-				<a href="contact.html">संपर्क करें</a>
-			</div>
-			<div class="copy">© 2025 <span>बालकेश्वर धाम मंदिर खोंखरा</span> — ॥ जय श्री कृष्ण ॥</div>
-		</div>
-	</div>
-</footer>
+<footer class="ft"><div class="ctn"><div class="ft-i">
+	<img src="public/photos/bal-krishna-logo.png" alt="Balkeshwar Dham" width="48" height="48" loading="lazy">
+	<h3>Balkeshwar Dham Mandir</h3><div class="s">Khokhara, 306306, Sojat, Pali, Rajasthan</div>
+	<div class="lk"><a href="index.html">Home</a><a href="about.html">About</a><a href="donation.html">Donate</a><a href="contact.html">Contact</a></div>
+	<div class="cp">© 2025 <span>Balkeshwar Dham Mandir</span> — ॥ Jai Shri Krishna ॥</div>
+</div></div></footer>
 
 <script>
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => { navToggle.classList.toggle('active'); navLinks.classList.toggle('open'); });
-navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { navToggle.classList.remove('active'); navLinks.classList.remove('open'); }));
+var nb=document.getElementById('nb');window.addEventListener('scroll',function(){nb.classList.toggle('sc',window.scrollY>50)});
+var nt=document.getElementById('nt'),nl=document.getElementById('nl');
+nt.addEventListener('click',function(){nt.classList.toggle('on');nl.classList.toggle('op')});
+nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nt.classList.remove('on');nl.classList.remove('op')})});
+document.querySelectorAll('img[loading="lazy"]').forEach(function(i){if(i.complete)i.classList.add('ld');else i.addEventListener('load',function(){i.classList.add('ld')})});
 </script>
 </body>
 </html>
-
-
